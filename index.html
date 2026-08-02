@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From the Jug to the Tap — A Drinking-Water Plan for Our Simsbury Home</title>
+<meta name="description" content="A researched plan to replace 5-gallon jug water delivery with in-house drinking-water filtration: very hard Farmington Valley well water with trace uranium.">
+<style>
+  :root {
+    color-scheme: light;
+    --page:           #f9f9f7;
+    --surface-1:      #fcfcfb;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --grid:           #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6;  /* jug delivery */
+    --series-2:       #eb6834;  /* DIY RO */
+    --series-3:       #1baf7a;  /* pro-installed RO */
+    --accent:         #2a78d6;
+    --accent-deep:    #1c5cab;
+    --accent-wash:    #cde2fb;
+    --good:           #0ca30c;
+    --good-text:      #006300;
+    --critical:       #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:           #0d0d0d;
+      --surface-1:      #1a1a19;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --grid:           #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1:       #3987e5;
+      --series-2:       #d95926;
+      --series-3:       #199e70;
+      --accent:         #3987e5;
+      --accent-deep:    #86b6ef;
+      --accent-wash:    #16375e;
+      --good:           #0ca30c;
+      --good-text:      #0ca30c;
+      --critical:       #e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:           #0d0d0d;
+    --surface-1:      #1a1a19;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --grid:           #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1:       #3987e5;
+    --series-2:       #d95926;
+    --series-3:       #199e70;
+    --accent:         #3987e5;
+    --accent-deep:    #86b6ef;
+    --accent-wash:    #16375e;
+    --good:           #0ca30c;
+    --good-text:      #0ca30c;
+    --critical:       #e66767;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- hero ---------- */
+  header.hero {
+    padding: 72px 0 56px;
+    border-bottom: 1px solid var(--border);
+    background:
+      radial-gradient(1200px 400px at 50% -180px, var(--accent-wash), transparent 70%),
+      var(--page);
+  }
+  .eyebrow {
+    font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent-deep); font-weight: 600; margin-bottom: 14px;
+  }
+  h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 18px; }
+  .sub { font-size: clamp(17px, 2.4vw, 20px); color: var(--text-secondary); max-width: 46em; }
+  .verdict {
+    margin-top: 32px; padding: 20px 24px; border-radius: 12px;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    max-width: 52em;
+  }
+  .verdict strong { color: var(--accent-deep); }
+
+  /* ---------- sections ---------- */
+  section { padding: 52px 0 8px; }
+  h2 { font-size: clamp(24px, 3.6vw, 32px); letter-spacing: -0.015em; margin-bottom: 8px; }
+  .kicker { color: var(--text-muted); font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+  .lede { color: var(--text-secondary); max-width: 46em; margin-bottom: 28px; }
+  p + p { margin-top: 12px; }
+  a { color: var(--accent-deep); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+  /* ---------- stat tiles ---------- */
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 36px 0 0; }
+  .tile {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px;
+  }
+  .tile .label { font-size: 13px; color: var(--text-secondary); margin-bottom: 4px; }
+  .tile .value { font-size: 30px; font-weight: 600; line-height: 1.15; }
+  .tile .note  { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+  .tile .value .unit { font-size: 17px; font-weight: 500; color: var(--text-secondary); }
+
+  /* ---------- cards ---------- */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px;
+  }
+  .card h3 { font-size: 18px; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .card p { font-size: 15px; color: var(--text-secondary); }
+  .card .src { font-size: 13px; margin-top: 10px; }
+
+  /* ---------- steps ---------- */
+  .steps { display: grid; gap: 14px; margin-top: 8px; counter-reset: step; }
+  .step {
+    display: grid; grid-template-columns: 52px 1fr; gap: 18px;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px;
+  }
+  .step .num {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: grid; place-items: center;
+    font-size: 20px; font-weight: 700;
+  }
+  .step h3 { font-size: 18px; margin-bottom: 6px; }
+  .step p { font-size: 15px; color: var(--text-secondary); }
+  .step .cost { display: inline-block; margin-top: 10px; font-size: 13px; font-weight: 600; color: var(--accent-deep); background: color-mix(in srgb, var(--accent) 10%, transparent); padding: 3px 10px; border-radius: 999px; }
+
+  /* ---------- tables ---------- */
+  .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-1); margin-top: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 640px; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+  thead th { font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); border-bottom: 1px solid var(--baseline); position: sticky; top: 0; background: var(--surface-1); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .yes, .no { font-weight: 600; white-space: nowrap; }
+  .yes { color: var(--good-text); }
+  .no  { color: var(--critical); }
+  .pill {
+    display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.04em;
+    color: var(--accent-deep); background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-radius: 999px; padding: 2px 9px; margin-left: 8px; vertical-align: 2px;
+  }
+  .tbl-note { font-size: 13px; color: var(--text-muted); margin-top: 10px; max-width: 52em; }
+
+  /* ---------- chart ---------- */
+  .chart-card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px; margin-top: 8px;
+  }
+  .chart-card h3 { font-size: 17px; }
+  .chart-card .chart-sub { font-size: 13.5px; color: var(--text-muted); margin-bottom: 14px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13.5px; color: var(--text-secondary); margin-bottom: 6px; }
+  .legend .key { display: inline-flex; align-items: center; gap: 7px; }
+  .legend .swatch { width: 18px; height: 0; border-top: 3px solid; border-radius: 2px; }
+  #chart { position: relative; }
+  #chart svg { display: block; width: 100%; height: auto; }
+  .tooltip {
+    position: absolute; pointer-events: none; z-index: 5;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 10px; padding: 10px 12px; font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    min-width: 190px; display: none;
+  }
+  .tooltip .t-title { color: var(--text-muted); font-size: 12px; margin-bottom: 6px; }
+  .tooltip .t-row { display: flex; align-items: center; gap: 8px; margin-top: 3px; }
+  .tooltip .t-key { width: 14px; height: 0; border-top: 3px solid; border-radius: 2px; flex: none; }
+  .tooltip .t-val { font-weight: 700; font-variant-numeric: tabular-nums; margin-left: auto; }
+  .tooltip .t-name { color: var(--text-secondary); }
+  details.tableview { margin-top: 14px; font-size: 14px; }
+  details.tableview summary { cursor: pointer; color: var(--accent-deep); font-weight: 600; }
+  details.tableview .table-scroll { margin-top: 10px; }
+  details.tableview table { min-width: 480px; }
+
+  /* ---------- checklist ---------- */
+  .checklist { list-style: none; display: grid; gap: 10px; margin-top: 8px; }
+  .checklist li {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 18px; display: grid; grid-template-columns: 26px 1fr; gap: 12px;
+    font-size: 15px; color: var(--text-secondary);
+  }
+  .checklist li b { color: var(--text-primary); }
+  .checklist .box {
+    width: 20px; height: 20px; margin-top: 2px; border-radius: 6px;
+    border: 2px solid var(--baseline);
+  }
+
+  /* ---------- sources / footer ---------- */
+  .sources { columns: 2; column-gap: 32px; font-size: 13.5px; margin-top: 8px; }
+  .sources li { margin-bottom: 8px; break-inside: avoid; color: var(--text-secondary); }
+  @media (max-width: 640px) { .sources { columns: 1; } .step { grid-template-columns: 1fr; } }
+  footer {
+    margin-top: 64px; padding: 32px 0 48px;
+    border-top: 1px solid var(--border);
+    font-size: 13.5px; color: var(--text-muted);
+  }
+  footer p + p { margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Simsbury, Connecticut · Private well · Researched August 2026</div>
+    <h1>From the jug to the tap</h1>
+    <p class="sub">A researched plan to retire our 5-gallon water-delivery service and drink from our own tap — built for very hard Farmington Valley well water with a trace of uranium in a past test.</p>
+    <div class="verdict">
+      <strong>The short answer:</strong> retest the well first (our pipes were replaced since the last test, and CT DPH says that alone warrants a retest). Then install an <strong>NSF/ANSI&nbsp;58 under-sink reverse-osmosis system</strong> with a remineralization stage at the kitchen sink, protected by a <strong>whole-house water softener</strong>. RO removes 90–99% of uranium and fixes both hardness and taste at the tap — and it pays for itself versus jug delivery in about a year.
+    </div>
+
+    <div class="tiles">
+      <div class="tile">
+        <div class="label">Local groundwater hardness</div>
+        <div class="value">13 <span class="unit">gpg avg</span></div>
+        <div class="note">"Very hard" starts at 10.5 gpg (USGS)</div>
+      </div>
+      <div class="tile">
+        <div class="label">Uranium in our past test</div>
+        <div class="value">&lt; 30 <span class="unit">µg/L</span></div>
+        <div class="note">Trace — below the EPA limit; retest advised</div>
+      </div>
+      <div class="tile">
+        <div class="label">What jug delivery costs us</div>
+        <div class="value">~$630 <span class="unit">/ yr</span></div>
+        <div class="note">Typical family range $480–780/yr</div>
+      </div>
+      <div class="tile">
+        <div class="label">RO break-even vs. jugs</div>
+        <div class="value">~10 <span class="unit">months</span></div>
+        <div class="note">DIY under-sink system, incl. filters</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="situation">
+    <div class="kicker">Where we're starting</div>
+    <h2>Why we're doing this</h2>
+    <p class="lede">We stopped drinking our tap water years ago and switched to 5-gallon jug delivery. The water is very hard and doesn't taste good, and a private well test a few years back found a trace amount of uranium — below the allowed limit, but enough to make us cautious. Since then, the pipes serving the house have been replaced. The jugs work, but they're a recurring cost, a storage hassle, and — it turns out — no longer necessary.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>The uranium is natural — and common</h3>
+        <p>Uranium leaches from Connecticut's bedrock into well water. A USGS/CT&nbsp;DPH study found detectable uranium (≥1&nbsp;µg/L) across roughly <b>45% of the state</b>, with only ~4.7% of wells exceeding the 30&nbsp;µg/L EPA limit. Below the limit, no treatment is required. The health concern at low levels is chemical kidney stress from long-term ingestion — not radiation. Levels fluctuate, so DPH advises retesting about every 5 years.</p>
+        <p class="src"><a href="https://www.usgs.gov/news/new-report-shows-some-private-wells-connecticut-test-high-naturally-occurring-arsenic-uranium">USGS study</a> · <a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/private_wells/2018-Downloads/050818-uranium_in_well_water_September_2016.pdf">CT DPH fact sheet</a></p>
+      </div>
+      <div class="card">
+        <h3>Our water really is "very hard"</h3>
+        <p>USGS classifies anything over 180&nbsp;mg/L (10.5&nbsp;gpg) as very hard. Aquarion's public wells in Simsbury — drawing on the same aquifer local private wells tap — average <b>13&nbsp;gpg</b> (range 4–25). Even the utility softens two of its wells. Hardness is what causes the mineral taste, the scale, and — left untreated — clogged RO membranes.</p>
+        <p class="src"><a href="https://www.usgs.gov/water-science-school/science/hardness-water">USGS hardness scale</a> · <a href="https://www.aquarionwater.com/docs/default-source/water-quality/water-quality-reports/ct/2023/simsbury_ccr_2023.pdf">Aquarion Simsbury report</a></p>
+      </div>
+      <div class="card">
+        <h3>The taste is fixable</h3>
+        <p>Calcium and magnesium above ~7&nbsp;gpg give water a mineral edge; iron and manganese — common in wells — add metallic notes. RO strips all of it, but pure RO water tastes flat and is slightly acidic. The fix is a <b>remineralization stage</b>: a calcite cartridge after the membrane that adds back a small, pleasant amount of minerals and lifts pH to ~7.2–8.0.</p>
+        <p class="src"><a href="https://mytapscore.com/blogs/tips-for-taps/the-ultimate-tap-water-taste-guide">Taste guide</a> · <a href="https://www.frizzlife.com/blogs/guide/reverse-osmosis-remineralization-guide-how-to-remineralize-ro-water">Remineralization</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="uranium">
+    <div class="kicker">The science</div>
+    <h2>What actually removes uranium</h2>
+    <p class="lede">Uranium travels in water as dissolved uranyl-carbonate complexes. Only a few technologies capture it — and two popular ones don't. CT&nbsp;DPH calls point-of-use reverse osmosis "the most common type of treatment used for uranium removal and very effective."</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Technology</th><th>Removes uranium?</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Reverse osmosis</b> (under-sink)</td>
+            <td><span class="yes">✓ Yes — 90–99%</span></td>
+            <td>CT DPH's recommended approach for drinking water; membrane replaced every 2–3 years keeps performance up.</td>
+          </tr>
+          <tr>
+            <td><b>Anion exchange</b> (whole-house)</td>
+            <td><span class="yes">✓ Yes — &gt;98%</span></td>
+            <td>Strong-base resin; the whole-house option if uranium ever approached or exceeded 30&nbsp;µg/L. Overkill for trace levels.</td>
+          </tr>
+          <tr>
+            <td><b>Distillation</b></td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td>Effective but slow and energy-hungry; rarely the practical choice.</td>
+          </tr>
+          <tr>
+            <td><b>Carbon filters</b> (pitchers, fridge, faucet)</td>
+            <td><span class="no">✗ No</span></td>
+            <td>Not designed for uranium — UConn's treatment matrix doesn't list uranium among what carbon removes.</td>
+          </tr>
+          <tr>
+            <td><b>Water softener</b> (cation exchange)</td>
+            <td><span class="no">✗ No</span></td>
+            <td>0–70% depending on pH, degrading as resin loads with calcium — WQA says it cannot be relied on for uranium. It has a different job (hardness).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">Uranium enters the body only through ingestion — not through skin or breathing — so showering and bathing are safe, and treating just the drinking-and-cooking tap is the standard, health-department-endorsed approach. Sources: <a href="https://wqa.org/wp-content/uploads/2022/09/2014_Uranium.pdf">WQA uranium fact sheet</a>, <a href="https://extension.media.uconn.edu/wp-content/uploads/sites/3795/2024/05/Water-Treatment-Guide-FINAL-1-16-24-2.pdf">UConn Extension treatment guide</a>, <a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/private_wells/2018-Downloads/050818-uranium_in_well_water_September_2016.pdf">CT DPH</a>.</p>
+  </section>
+
+  <section id="plan">
+    <div class="kicker">The recommendation</div>
+    <h2>The setup that fits our house</h2>
+    <p class="lede">Every authority we checked — CT DPH, UConn Extension, the Water Quality Association — converges on the same architecture for hard well water with trace uranium.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div>
+          <h3>Retest the well first</h3>
+          <p>Our test is years old, and CT DPH explicitly recommends re-running the basic panel <b>after any repair or replacement of water pipes</b> — which we've done. Uranium levels also fluctuate over time. UConn's Institute of Water Resources runs a subsidized mail-in panel (bacteria, nitrate, metals, hardness, lead, arsenic, <b>uranium</b>) that would normally cost $350+. Knowing today's uranium, hardness, iron, and pH numbers is what lets us size the equipment correctly instead of guessing.</p>
+          <span class="cost">$200–235 · UConn CTIWR kit</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div>
+          <h3>Whole-house water softener (NSF/ANSI 44)</h3>
+          <p>A salt-based ion-exchange softener fixes hardness everywhere — taste, scale, appliances — and it protects the RO membrane: on very hard feed water, softening upstream can stretch membrane life from ~18 months to ~4 years. Salt-free "TAC" conditioners are lower-maintenance but only condition scale; for genuinely very hard water, true softening is the safer call. (Don't worry about the added sodium — the RO removes it at the drinking tap.)</p>
+          <span class="cost">$1,200–3,800 installed + $60–300/yr salt</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <h3>Under-sink reverse osmosis at the kitchen (NSF/ANSI 58)</h3>
+          <p>This is the jug replacement: its own faucet at the sink covering all drinking and cooking water, with a $20 quarter-inch line teed to the fridge and ice maker. Look for NSF/ANSI&nbsp;58 certification with a <b>radium 226/228 reduction claim</b> (the closest certified radionuclide claim — no consumer RO carries a certified uranium-specific claim, but CT DPH endorses RO for uranium regardless) and a <b>remineralization stage</b> for taste.</p>
+          <span class="cost">$200–1,000 + ~$100–170/yr filters</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <div>
+          <h3>Licensed install, then verify</h3>
+          <p>Connecticut requires a P1/P2 plumbing or J1/J2 water-conditioning license for installers (verify via DCP, 860-263-6000). After startup, lab-test the RO's product water to confirm uranium is non-detect and TDS is low — then test before-and-after the system periodically to prove it keeps working. That before/after test is also the moment we cancel the jug service with confidence.</p>
+          <span class="cost">$200–500 plumber (or DIY the RO)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="systems">
+    <div class="kicker">Hardware</div>
+    <h2>Under-sink RO systems compared</h2>
+    <p class="lede">Prices checked August 2026; street prices move weekly. All of these remove uranium at the membrane — the differentiators are certification, waste ratio, remineralization, and running cost.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>System</th>
+            <th class="num">Price</th>
+            <th>Type</th>
+            <th>Remineralization</th>
+            <th>NSF/ANSI 58</th>
+            <th class="num">Filters / yr</th>
+            <th>Waste ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Home Master TMAFC-ERP</b><span class="pill">OUR PICK</span></td>
+            <td class="num">~$430</td>
+            <td>Tank + permeate pump</td>
+            <td><span class="yes">✓ Yes</span> (Ca/Mg, 2-pass)</td>
+            <td><span class="no">✗ Components only</span></td>
+            <td class="num">~$99</td>
+            <td><b>1:1</b> (best in class)</td>
+          </tr>
+          <tr>
+            <td><b>iSpring RCC7AK</b></td>
+            <td class="num">~$200</td>
+            <td>Tank, 6-stage</td>
+            <td><span class="yes">✓ Yes</span> (alkaline)</td>
+            <td><span class="yes">✓ Certified</span></td>
+            <td class="num">~$90–180</td>
+            <td>~3:1 waste</td>
+          </tr>
+          <tr>
+            <td><b>APEC ROES-PH75</b></td>
+            <td class="num">~$269</td>
+            <td>Tank, 6-stage</td>
+            <td><span class="yes">✓ Yes</span> (calcite)</td>
+            <td><span class="no">✗ WQA Gold Seal</span></td>
+            <td class="num">~$80–120</td>
+            <td>~3:1 waste</td>
+          </tr>
+          <tr>
+            <td><b>Aquasana SmartFlow RO</b></td>
+            <td class="num">~$450</td>
+            <td>Tank, 4-stage</td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="yes">✓ Certified</span> (+53, 401, PFAS)</td>
+            <td class="num">~$170</td>
+            <td>Not published</td>
+          </tr>
+          <tr>
+            <td><b>AO Smith RO-MB-4000</b></td>
+            <td class="num">~$200</td>
+            <td>Tank, 4-stage</td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="yes">✓ Certified</span> (+53, 401, PFAS)</td>
+            <td class="num">~$100–150</td>
+            <td>Not published</td>
+          </tr>
+          <tr>
+            <td><b>Waterdrop G3P800</b></td>
+            <td class="num">~$700–1,000</td>
+            <td><b>Tankless</b>, 800 GPD</td>
+            <td><span class="no">✗ Separate model</span></td>
+            <td><span class="yes">✓ Certified</span> (42, 53, 58, 372)</td>
+            <td class="num">~$155</td>
+            <td>3:1 <i>pure</i>:drain</td>
+          </tr>
+          <tr>
+            <td><b>Culligan Aqua-Cleer</b> (pro)</td>
+            <td class="num">$1,050–1,700 installed</td>
+            <td>Tank, dealer-built</td>
+            <td><span class="yes">✓ Optional</span></td>
+            <td><span class="yes">✓ Certified</span></td>
+            <td class="num">~$100–200</td>
+            <td>~3–4:1 waste</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note"><b>Why the Home Master is our pick:</b> it's designed for well water, wastes the least (a permeate pump brings it to ~1:1 where typical tank systems send 3 gallons to the drain per gallon made), its two-pass remineralization is the best-reviewed for taste, and annual filter cost is lowest. The trade-off: the system itself isn't NSF/ANSI 58 certified (it uses certified components). If end-to-end certification matters most, the iSpring RCC7AK at ~$200 or the Aquasana SmartFlow are the certified picks. Whichever we choose, the softener upstream (step 2) is what keeps the membrane alive on our water.</p>
+  </section>
+
+  <section id="money">
+    <div class="kicker">The money</div>
+    <h2>Jugs are the expensive option</h2>
+    <p class="lede">Our delivery service runs roughly $480–780 a year for a family's drinking water. Every filtration option beats it within a few years — the DIY route beats it within months.</p>
+
+    <div class="chart-card">
+      <h3>Cumulative cost of drinking water, five years</h3>
+      <div class="chart-sub">Jug delivery at ~$52.50/month (midpoint) vs. RO ownership: upfront equipment + install, then annual filters. Hover or tap for values.</div>
+      <div class="legend" id="legend"></div>
+      <div id="chart"></div>
+      <details class="tableview">
+        <summary>View the data as a table</summary>
+        <div class="table-scroll">
+          <table id="datatable">
+            <thead>
+              <tr><th>End of year</th><th class="num">Jug delivery</th><th class="num">DIY RO (Home Master)</th><th class="num">Pro tankless RO (Waterdrop + plumber)</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+    <p class="tbl-note">Assumptions: jugs $630/yr (midpoint of $480–780). DIY RO: $450 upfront (Home Master TMAFC-ERP + fridge kit), $99/yr filters — breaks even in ~10 months. Pro route: $1,100 upfront (Waterdrop G3P800 + plumber install), $155/yr filters — breaks even around 2¼ years. Five-year totals: jugs ~$3,150 · DIY RO ~$945 · pro RO ~$1,875. RO wastewater cost on a private well is effectively a few dollars a year. The whole-house softener isn't charged to this comparison — it benefits the entire house (scale, appliances, laundry), not just drinking water.</p>
+  </section>
+
+  <section id="actions">
+    <div class="kicker">Next steps</div>
+    <h2>The action plan</h2>
+    <ul class="checklist">
+      <li><span class="box"></span><span><b>Order the UConn CTIWR well test kit</b> ($200–235, includes uranium and hardness) — or use a CT-certified lab like Phoenix Environmental in Manchester, (860)&nbsp;645-1102. CT DPH Private Well Program can advise: (860)&nbsp;509-7296.</span></li>
+      <li><span class="box"></span><span><b>Also test radon in air/water</b> — radon comes from the same bedrock uranium chain, and CT DPH links the two; a uranium detection is a nudge to check radon too.</span></li>
+      <li><span class="box"></span><span><b>Get 2–3 softener quotes</b> from licensed (P1/P2 or J1/J2) installers, sized to the tested hardness number — not to a salesperson's estimate.</span></li>
+      <li><span class="box"></span><span><b>Buy and install the under-sink RO</b> (pick from the table above), with the fridge/ice-maker tee kit.</span></li>
+      <li><span class="box"></span><span><b>Lab-test the RO's output water</b> — confirm uranium non-detect and low TDS.</span></li>
+      <li><span class="box"></span><span><b>Cancel the jug delivery service.</b> 🎉</span></li>
+      <li><span class="box"></span><span><b>Recurring:</b> RO filters every 6–12 months, membrane every 2–3 years, softener salt monthly, re-test uranium/arsenic/radon every ~5 years and the basic panel annually.</span></li>
+    </ul>
+  </section>
+
+  <section id="sources">
+    <div class="kicker">Receipts</div>
+    <h2>Sources</h2>
+    <ul class="sources">
+      <li><a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/private_wells/2018-Downloads/050818-uranium_in_well_water_September_2016.pdf">CT DPH — Uranium in Private Well Water (fact sheet)</a></li>
+      <li><a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/eoha/pdf/24ResidentialDrinkingWaterWellTestingpdf.pdf">CT DPH Publication 24 — Private Well Testing Recommendations</a></li>
+      <li><a href="https://extension.media.uconn.edu/wp-content/uploads/sites/3795/2024/05/Water-Treatment-Guide-FINAL-1-16-24-2.pdf">UConn Extension — Managing Your Private Well: Testing &amp; Treatment Guide</a></li>
+      <li><a href="https://www.usgs.gov/news/new-report-shows-some-private-wells-connecticut-test-high-naturally-occurring-arsenic-uranium">USGS — Arsenic &amp; Uranium in Connecticut Private Wells (2013–15 study)</a></li>
+      <li><a href="https://www.usgs.gov/publications/arsenic-and-uranium-occurrence-private-wells-connecticut-2013-18-a-spatially-weighted">USGS — Spatially Weighted Analysis, CT Wells 2013–18</a></li>
+      <li><a href="https://wqa.org/wp-content/uploads/2022/09/2014_Uranium.pdf">Water Quality Association — Uranium Technical Fact Sheet</a></li>
+      <li><a href="https://www.aquarionwater.com/docs/default-source/water-quality/water-quality-reports/ct/2023/simsbury_ccr_2023.pdf">Aquarion — Simsbury System Water Quality Report (hardness data)</a></li>
+      <li><a href="https://www.usgs.gov/water-science-school/science/hardness-water">USGS — Water Hardness Classification</a></li>
+      <li><a href="https://www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems">NSF — NSF/ANSI 58 Reverse Osmosis Standard</a></li>
+      <li><a href="https://info.nsf.org/Certified/DWTU/Listings.asp?Standard=058&amp;hdModlStd=ModlStd">NSF Certified Products Database (Standard 58)</a></li>
+      <li><a href="https://ctiwr.uconn.edu/well-testing/">UConn CT Institute of Water Resources — Well Testing Kits</a></li>
+      <li><a href="https://www.phoenixlabs.com/">Phoenix Environmental Laboratories, Manchester CT (DPH-certified)</a></li>
+      <li><a href="https://portal.ct.gov/dph/environmental-health/private-well-water-program/private-well-water-treatment---how-to-get-started-and-helpful-resources">CT DPH — Private Well Treatment: How to Get Started</a></li>
+      <li><a href="https://novascotia.ca/nse/water/uraniumremovalro.asp">Nova Scotia Environment — Uranium Removal by RO (field data)</a></li>
+      <li><a href="https://www.wupdhd.org/what-you-need-to-know-about-uranium/">Western UP Health Dept — Uranium in Drinking Water</a></li>
+      <li><a href="https://homeguide.com/costs/water-delivery-cost">HomeGuide — Water Delivery Cost (2026)</a></li>
+      <li><a href="https://homeguide.com/costs/reverse-osmosis-system-cost">HomeGuide — Reverse Osmosis System Cost</a></li>
+      <li><a href="https://www.homemasterfilters.com/replacementfilters.html">Home Master — Replacement Filter Pricing</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>About this page.</b> A family research project for our home in Simsbury, CT — compiled August 2026 with the help of Claude Code from public health guidance, USGS studies, and current retail pricing. It's a plan, not professional advice: the whole thing starts with a fresh certified lab test, and equipment choices should be sized to those results by a licensed installer.</p>
+    <p>Prices and links checked August 2, 2026. Hardness figures are area averages from the public Aquarion Simsbury system, not our specific well.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ---- data ----
+  var MONTHS = 60;
+  var series = [
+    { name: "Jug delivery",      cssVar: "--series-1", f: function (m) { return 52.5 * m; } },
+    { name: "DIY RO",            cssVar: "--series-2", f: function (m) { return m === 0 ? 450 : 450 + (99 / 12) * m; } },
+    { name: "Pro tankless RO",   cssVar: "--series-3", f: function (m) { return m === 0 ? 1100 : 1100 + (155 / 12) * m; } }
+  ];
+
+  var chartEl = document.getElementById("chart");
+  var legendEl = document.getElementById("legend");
+  var css = function (v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); };
+
+  // legend (3 series -> legend required)
+  series.forEach(function (s) {
+    var key = document.createElement("span");
+    key.className = "key";
+    var sw = document.createElement("span");
+    sw.className = "swatch";
+    sw.style.borderTopColor = "var(" + s.cssVar + ")";
+    key.appendChild(sw);
+    key.appendChild(document.createTextNode(s.name));
+    legendEl.appendChild(key);
+  });
+
+  // data table view
+  (function fillTable() {
+    var tbody = document.querySelector("#datatable tbody");
+    for (var y = 1; y <= 5; y++) {
+      var tr = document.createElement("tr");
+      var th = document.createElement("td");
+      th.textContent = "Year " + y;
+      tr.appendChild(th);
+      series.forEach(function (s) {
+        var td = document.createElement("td");
+        td.className = "num";
+        td.textContent = "$" + Math.round(s.f(y * 12)).toLocaleString();
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    }
+  })();
+
+  var fmt = function (v) { return "$" + Math.round(v).toLocaleString(); };
+
+  function render() {
+    chartEl.innerHTML = "";
+    var W = Math.max(320, chartEl.clientWidth);
+    var H = Math.min(400, Math.max(260, Math.round(W * 0.48)));
+    var PAD = { top: 18, right: 128, bottom: 34, left: 56 };
+    if (W < 560) { PAD.right = 16; }
+    var iw = W - PAD.left - PAD.right, ih = H - PAD.top - PAD.bottom;
+
+    var maxY = 3400; // clean ceiling above jug total ($3,150)
+    var xFor = function (m) { return PAD.left + (m / MONTHS) * iw; };
+    var yFor = function (v) { return PAD.top + ih - (v / maxY) * ih; };
+
+    var NS = "http://www.w3.org/2000/svg";
+    var svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    svg.setAttribute("width", W);
+    svg.setAttribute("height", H);
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Line chart: cumulative five-year cost. Jug delivery reaches about $3,150; DIY RO about $945; pro tankless RO about $1,875.");
+
+    function el(name, attrs) {
+      var e = document.createElementNS(NS, name);
+      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      return e;
+    }
+
+    // gridlines + y ticks (clean $1,000 steps)
+    [0, 1000, 2000, 3000].forEach(function (v) {
+      svg.appendChild(el("line", {
+        x1: PAD.left, x2: PAD.left + iw, y1: yFor(v), y2: yFor(v),
+        stroke: v === 0 ? css("--baseline") : css("--grid"), "stroke-width": 1
+      }));
+      var t = el("text", {
+        x: PAD.left - 8, y: yFor(v) + 4, "text-anchor": "end",
+        "font-size": "12", fill: css("--text-muted"),
+        "font-variant-numeric": "tabular-nums"
+      });
+      t.textContent = v === 0 ? "$0" : "$" + v.toLocaleString();
+      svg.appendChild(t);
+    });
+
+    // x ticks: year marks
+    for (var y = 0; y <= 5; y++) {
+      var t = el("text", {
+        x: xFor(y * 12), y: PAD.top + ih + 22, "text-anchor": "middle",
+        "font-size": "12", fill: css("--text-muted")
+      });
+      t.textContent = y === 0 ? "Start" : "Yr " + y;
+      svg.appendChild(t);
+    }
+
+    // series lines
+    series.forEach(function (s) {
+      var d = "";
+      for (var m = 0; m <= MONTHS; m++) {
+        d += (m === 0 ? "M" : "L") + xFor(m).toFixed(1) + " " + yFor(s.f(m)).toFixed(1) + " ";
+      }
+      svg.appendChild(el("path", {
+        d: d, fill: "none", stroke: css(s.cssVar),
+        "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round"
+      }));
+      // end marker with surface ring
+      var ex = xFor(MONTHS), ey = yFor(s.f(MONTHS));
+      svg.appendChild(el("circle", { cx: ex, cy: ey, r: 6, fill: css("--surface-1") }));
+      svg.appendChild(el("circle", { cx: ex, cy: ey, r: 4, fill: css(s.cssVar) }));
+      // direct end labels (relief for light-mode contrast warn): name over value
+      if (W >= 560) {
+        var lbl = el("text", { x: ex + 10, y: ey - 2, "font-size": "11.5", fill: css("--text-secondary") });
+        lbl.textContent = s.name;
+        svg.appendChild(lbl);
+        var val = el("text", {
+          x: ex + 10, y: ey + 13, "font-size": "12.5", "font-weight": "700",
+          fill: css("--text-primary"), "font-variant-numeric": "tabular-nums"
+        });
+        val.textContent = fmt(s.f(MONTHS));
+        svg.appendChild(val);
+      }
+    });
+
+    // crosshair + hover layer
+    var cross = el("line", {
+      y1: PAD.top, y2: PAD.top + ih, stroke: css("--baseline"),
+      "stroke-width": 1, visibility: "hidden"
+    });
+    svg.appendChild(cross);
+    var dots = series.map(function (s) {
+      var ring = el("circle", { r: 6, fill: css("--surface-1"), visibility: "hidden" });
+      var dot = el("circle", { r: 4, fill: css(s.cssVar), visibility: "hidden" });
+      svg.appendChild(ring); svg.appendChild(dot);
+      return { ring: ring, dot: dot };
+    });
+
+    var tip = document.createElement("div");
+    tip.className = "tooltip";
+    chartEl.appendChild(tip);
+
+    var hit = el("rect", {
+      x: PAD.left, y: PAD.top, width: iw, height: ih,
+      fill: "transparent", "pointer-events": "all"
+    });
+    svg.appendChild(hit);
+
+    function showAt(clientX) {
+      var rect = svg.getBoundingClientRect();
+      var px = (clientX - rect.left) * (W / rect.width);
+      var m = Math.round(((px - PAD.left) / iw) * MONTHS);
+      m = Math.max(0, Math.min(MONTHS, m));
+      var x = xFor(m);
+      cross.setAttribute("x1", x); cross.setAttribute("x2", x);
+      cross.setAttribute("visibility", "visible");
+
+      while (tip.firstChild) tip.removeChild(tip.firstChild);
+      var title = document.createElement("div");
+      title.className = "t-title";
+      title.textContent = m === 0 ? "At purchase" : "Month " + m + " (year " + Math.ceil(m / 12) + ")";
+      tip.appendChild(title);
+
+      series.forEach(function (s, i) {
+        var v = s.f(m);
+        dots[i].ring.setAttribute("cx", x); dots[i].ring.setAttribute("cy", yFor(v));
+        dots[i].dot.setAttribute("cx", x);  dots[i].dot.setAttribute("cy", yFor(v));
+        dots[i].ring.setAttribute("visibility", "visible");
+        dots[i].dot.setAttribute("visibility", "visible");
+        var row = document.createElement("div");
+        row.className = "t-row";
+        var key = document.createElement("span");
+        key.className = "t-key";
+        key.style.borderTopColor = "var(" + s.cssVar + ")";
+        var name = document.createElement("span");
+        name.className = "t-name";
+        name.textContent = s.name;
+        var val = document.createElement("span");
+        val.className = "t-val";
+        val.textContent = fmt(v);
+        row.appendChild(key); row.appendChild(name); row.appendChild(val);
+        tip.appendChild(row);
+      });
+
+      tip.style.display = "block";
+      var contRect = chartEl.getBoundingClientRect();
+      var left = (x / W) * rect.width + 14;
+      if (left + tip.offsetWidth > contRect.width) left = (x / W) * rect.width - tip.offsetWidth - 14;
+      tip.style.left = Math.max(0, left) + "px";
+      tip.style.top = "10px";
+    }
+    function hide() {
+      cross.setAttribute("visibility", "hidden");
+      dots.forEach(function (d) {
+        d.ring.setAttribute("visibility", "hidden");
+        d.dot.setAttribute("visibility", "hidden");
+      });
+      tip.style.display = "none";
+    }
+    hit.addEventListener("pointermove", function (e) { showAt(e.clientX); });
+    hit.addEventListener("pointerdown", function (e) { showAt(e.clientX); });
+    hit.addEventListener("pointerleave", hide);
+
+    chartEl.appendChild(svg);
+    chartEl.insertBefore(svg, tip);
+  }
+
+  render();
+  var rt;
+  window.addEventListener("resize", function () {
+    clearTimeout(rt);
+    rt = setTimeout(render, 150);
+  });
+  if (window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  }
+})();
+</script>
+
+</body>
+</html>
