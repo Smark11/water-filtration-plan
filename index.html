@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>From the Jug to the Tap — A Drinking-Water Plan for Our Simsbury Home</title>
-<meta name="description" content="A researched plan to replace 5-gallon jug water delivery with in-house drinking-water filtration: very hard Farmington Valley well water with trace uranium.">
+<meta name="description" content="A researched plan to replace 5-gallon jug water delivery with under-sink filtration: baseline testing, system types, and local installers for hard Aquarion city water in Simsbury, CT.">
 <style>
   :root {
     color-scheme: light;
@@ -132,7 +132,7 @@
   .card .src { font-size: 13px; margin-top: 10px; }
 
   /* ---------- steps ---------- */
-  .steps { display: grid; gap: 14px; margin-top: 8px; counter-reset: step; }
+  .steps { display: grid; gap: 14px; margin-top: 8px; }
   .step {
     display: grid; grid-template-columns: 52px 1fr; gap: 18px;
     background: var(--surface-1); border: 1px solid var(--border);
@@ -207,6 +207,15 @@
     border: 2px solid var(--baseline);
   }
 
+  /* ---------- aside ---------- */
+  .aside {
+    margin-top: 22px; padding: 18px 22px; border-radius: 12px;
+    background: color-mix(in srgb, var(--accent) 6%, var(--surface-1));
+    border: 1px solid var(--border); font-size: 15px; color: var(--text-secondary);
+    max-width: 52em;
+  }
+  .aside b { color: var(--text-primary); }
+
   /* ---------- sources / footer ---------- */
   .sources { columns: 2; column-gap: 32px; font-size: 13.5px; margin-top: 8px; }
   .sources li { margin-bottom: 8px; break-inside: avoid; color: var(--text-secondary); }
@@ -223,33 +232,33 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">Simsbury, Connecticut · Private well · Researched August 2026</div>
+    <div class="eyebrow">Simsbury, Connecticut · Aquarion city water · Researched August 2026</div>
     <h1>From the jug to the tap</h1>
-    <p class="sub">A researched plan to retire our 5-gallon water-delivery service and drink from our own tap — built for very hard Farmington Valley well water with a trace of uranium in a past test.</p>
+    <p class="sub">A researched plan to retire our 5-gallon water-delivery service and drink from our own tap — on hard, groundwater-sourced Aquarion city water, with an old test's trace of uranium in the back of our minds.</p>
     <div class="verdict">
-      <strong>The short answer:</strong> retest the well first (our pipes were replaced since the last test, and CT DPH says that alone warrants a retest). Then install an <strong>NSF/ANSI&nbsp;58 under-sink reverse-osmosis system</strong> with a remineralization stage at the kitchen sink, protected by a <strong>whole-house water softener</strong>. RO removes 90–99% of uranium and fixes both hardness and taste at the tap — and it pays for itself versus jug delivery in about a year.
+      <strong>The short answer:</strong> get a proper baseline first — a certified mail-in lab panel (<strong>Tap Score Advanced City Water, $299</strong>) plus a PFAS kit, with a first-draw lead sample since our service pipes were recently replaced. Then install an <strong>under-sink reverse-osmosis system with a remineralization stage</strong> — the only under-sink category that fixes hardness taste, chlorine, <em>and</em> uranium at the tap. Several verified local installers are listed below; it pays for itself versus jug delivery in about a year.
     </div>
 
     <div class="tiles">
       <div class="tile">
-        <div class="label">Local groundwater hardness</div>
-        <div class="value">13 <span class="unit">gpg avg</span></div>
-        <div class="note">"Very hard" starts at 10.5 gpg (USGS)</div>
+        <div class="label">Hardness (2025 system avg)</div>
+        <div class="value">10 <span class="unit">gpg</span></div>
+        <div class="note">Range 4–16 · "very hard" starts at 10.5</div>
       </div>
       <div class="tile">
-        <div class="label">Uranium in our past test</div>
-        <div class="value">&lt; 30 <span class="unit">µg/L</span></div>
-        <div class="note">Trace — below the EPA limit; retest advised</div>
+        <div class="label">Uranium (2025 system max)</div>
+        <div class="value">2.3 <span class="unit">ppb</span></div>
+        <div class="note">EPA limit is 30 — trace, as our old test found</div>
+      </div>
+      <div class="tile">
+        <div class="label">PFOA / PFOS detected</div>
+        <div class="value">4 <span class="unit">ppt</span></div>
+        <div class="note">Right at EPA's new 4.0 ppt limit</div>
       </div>
       <div class="tile">
         <div class="label">What jug delivery costs us</div>
         <div class="value">~$630 <span class="unit">/ yr</span></div>
         <div class="note">Typical family range $480–780/yr</div>
-      </div>
-      <div class="tile">
-        <div class="label">RO break-even vs. jugs</div>
-        <div class="value">~10 <span class="unit">months</span></div>
-        <div class="note">DIY under-sink system, incl. filters</div>
       </div>
     </div>
   </div>
@@ -259,31 +268,171 @@
 
   <section id="situation">
     <div class="kicker">Where we're starting</div>
-    <h2>Why we're doing this</h2>
-    <p class="lede">We stopped drinking our tap water years ago and switched to 5-gallon jug delivery. The water is very hard and doesn't taste good, and a private well test a few years back found a trace amount of uranium — below the allowed limit, but enough to make us cautious. Since then, the pipes serving the house have been replaced. The jugs work, but they're a recurring cost, a storage hassle, and — it turns out — no longer necessary.</p>
+    <h2>What's actually in our water</h2>
+    <p class="lede">We're on Aquarion's Simsbury system — public, regulated, and drawn from eight local groundwater wells. That's good news: the utility publishes a full water-quality report every year, and most of it is reassuring. But it also explains exactly why the tap tastes the way it does, and it leaves two questions only a test at <em>our own tap</em> can answer.</p>
     <div class="cards">
       <div class="card">
-        <h3>The uranium is natural — and common</h3>
-        <p>Uranium leaches from Connecticut's bedrock into well water. A USGS/CT&nbsp;DPH study found detectable uranium (≥1&nbsp;µg/L) across roughly <b>45% of the state</b>, with only ~4.7% of wells exceeding the 30&nbsp;µg/L EPA limit. Below the limit, no treatment is required. The health concern at low levels is chemical kidney stress from long-term ingestion — not radiation. Levels fluctuate, so DPH advises retesting about every 5 years.</p>
-        <p class="src"><a href="https://www.usgs.gov/news/new-report-shows-some-private-wells-connecticut-test-high-naturally-occurring-arsenic-uranium">USGS study</a> · <a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/private_wells/2018-Downloads/050818-uranium_in_well_water_September_2016.pdf">CT DPH fact sheet</a></p>
+        <h3>Mostly monitored, mostly fine</h3>
+        <p>Aquarion's 2025 Simsbury report shows uranium at trace levels (max <b>2.3&nbsp;ppb</b> against a 30&nbsp;ppb limit — consistent with our old private test), and disinfection byproducts far below limits. The chlorine residual (0.29–1.60&nbsp;ppm) that keeps the system safe is also part of the taste we don't love.</p>
+        <p class="src"><a href="https://www.aquarionwater.com/docs/default-source/water-quality/water-quality-reports/ct/2025/simsbury_ct_wqr_final.pdf">Aquarion 2025 Simsbury report</a></p>
       </div>
       <div class="card">
-        <h3>Our water really is "very hard"</h3>
-        <p>USGS classifies anything over 180&nbsp;mg/L (10.5&nbsp;gpg) as very hard. Aquarion's public wells in Simsbury — drawing on the same aquifer local private wells tap — average <b>13&nbsp;gpg</b> (range 4–25). Even the utility softens two of its wells. Hardness is what causes the mineral taste, the scale, and — left untreated — clogged RO membranes.</p>
-        <p class="src"><a href="https://www.usgs.gov/water-science-school/science/hardness-water">USGS hardness scale</a> · <a href="https://www.aquarionwater.com/docs/default-source/water-quality/water-quality-reports/ct/2023/simsbury_ccr_2023.pdf">Aquarion Simsbury report</a></p>
+        <h3>The hardness is the local geology</h3>
+        <p>Because the system pumps groundwater from the same aquifer as local wells, it averages <b>10&nbsp;gpg</b> of hardness (range 4–16) — hard to very hard on the USGS scale, and Aquarion softens two of its own wells to knock it down. Calcium and magnesium at these levels are the mineral edge in the taste, and the scale on our fixtures.</p>
+        <p class="src"><a href="https://www.usgs.gov/water-science-school/science/hardness-water">USGS hardness scale</a> · <a href="https://www.aquarionwater.com/docs/default-source/water-quality/water-quality-reports/ct/2025/simsbury_ct_wqr_final.pdf">2025 report</a></p>
       </div>
       <div class="card">
-        <h3>The taste is fixable</h3>
-        <p>Calcium and magnesium above ~7&nbsp;gpg give water a mineral edge; iron and manganese — common in wells — add metallic notes. RO strips all of it, but pure RO water tastes flat and is slightly acidic. The fix is a <b>remineralization stage</b>: a calcite cartridge after the membrane that adds back a small, pleasant amount of minerals and lifts pH to ~7.2–8.0.</p>
-        <p class="src"><a href="https://mytapscore.com/blogs/tips-for-taps/the-ultimate-tap-water-taste-guide">Taste guide</a> · <a href="https://www.frizzlife.com/blogs/guide/reverse-osmosis-remineralization-guide-how-to-remineralize-ro-water">Remineralization</a></p>
+        <h3>What the utility report can't tell us</h3>
+        <p>Two things are tap-specific. <b>Lead and copper:</b> our service pipes were recently replaced, and disturbed pipe scale can cause a temporary lead spike — in 2025 sampling, one Simsbury home exceeded the 15&nbsp;ppb action level. <b>PFAS:</b> PFOA and PFOS were detected at up to 4&nbsp;ppt — exactly at EPA's new limit. Both are questions for a test at our kitchen faucet.</p>
+        <p class="src"><a href="https://www.aquarionwater.com/docs/default-source/water-quality/water-quality-reports/ct/2025/simsbury_ct_wqr_final.pdf">2025 report</a> · <a href="https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas">EPA PFAS rule</a></p>
       </div>
     </div>
+  </section>
+
+  <section id="baseline">
+    <div class="kicker">Step one</div>
+    <h2>Getting a real baseline</h2>
+    <p class="lede">Test strips and TDS meters can't see the things that matter here — lead, uranium, and PFAS live at parts-per-billion and parts-per-trillion levels that only a certified lab can measure. These are the best mail-in lab tests on the market for city water; prices checked August 2026.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Test</th>
+            <th class="num">Price</th>
+            <th class="num">Analytes</th>
+            <th>Covers our priorities</th>
+            <th>Turnaround</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Tap Score Advanced City Water</b><span class="pill">OUR PICK</span></td>
+            <td class="num">$299</td>
+            <td class="num">111</td>
+            <td>Uranium, hardness, lead, copper, chlorine, THMs</td>
+            <td>~5 days at lab</td>
+            <td>Certified-lab network; the best consumer report — maps results to filter choices. Wirecutter's repeat top pick.</td>
+          </tr>
+          <tr>
+            <td><b>Tap Score Essential City Water</b></td>
+            <td class="num">$189</td>
+            <td class="num">49</td>
+            <td>Uranium, hardness, lead, copper, chlorine</td>
+            <td>~5 days</td>
+            <td>Budget pick — covers every decision-driving analyte, skips DBPs (which the utility report shows are negligible anyway).</td>
+          </tr>
+          <tr>
+            <td><b>Cyclopure PFAS Kit</b><span class="pill">ADD-ON</span></td>
+            <td class="num">$79</td>
+            <td class="num">55 PFAS</td>
+            <td>PFAS only — the analyte worth adding here</td>
+            <td>1–2 weeks</td>
+            <td>Best PFAS value on the market (EPA-method-aligned). Pairs with either Tap Score kit.</td>
+          </tr>
+          <tr>
+            <td><b>ETR Labs Premium</b></td>
+            <td class="num">$249</td>
+            <td class="num">113</td>
+            <td>Uranium, hardness, lead, copper, chlorine</td>
+            <td>2–4 days</td>
+            <td>Fastest turnaround; ISO 17025-accredited in-house lab.</td>
+          </tr>
+          <tr>
+            <td><b>NTL CityCheck Deluxe</b></td>
+            <td class="num">$329</td>
+            <td class="num">~107</td>
+            <td>Uranium, hardness, lead, copper, DBPs</td>
+            <td>~10–15 days</td>
+            <td>Long-established certified lab; overnight return shipping costs extra.</td>
+          </tr>
+          <tr>
+            <td><b>Safe Home Ultimate</b></td>
+            <td class="num">$400</td>
+            <td class="num">200</td>
+            <td>Hardness, lead, copper, THMs (uranium unconfirmed)</td>
+            <td>7–10 days</td>
+            <td>Biggest analyte count, but uranium coverage isn't explicit — confirm before buying.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note"><b>Sampling tip that matters for us:</b> collect the lead/copper sample as a <b>first draw</b> — first water out of the tap after 6+ hours of no use — because that's the worst case, and it's the number that reflects our recently replaced service lines. If the lines were replaced within the last ~6 months, plan a repeat lead check afterward; post-replacement particulate lead spikes are the reason utilities hand out pitcher filters after line work. Aquarion's system-level report is free at <a href="https://www.aquarionwater.com/water-quality/water-quality-reports">aquarionwater.com</a> — our tap test complements it rather than duplicating it.</p>
+  </section>
+
+  <section id="types">
+    <div class="kicker">The technology</div>
+    <h2>Under-sink systems, by type</h2>
+    <p class="lede">"Under-sink filter" covers six very different machines. Only one category removes dissolved hardness minerals and uranium at the tap — the rest polish taste but leave the minerals (and the uranium) in the glass.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th class="num">Price</th>
+            <th>Hardness taste</th>
+            <th>Chlorine</th>
+            <th>Uranium</th>
+            <th>Lead</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Tankless RO + remineralization</b><span class="pill">BEST FIT</span></td>
+            <td class="num">$300–700</td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="yes">✓ 90–99%</span></td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td>On-demand flow, no tank, 1:1–3:1 waste ratio; needs an outlet under the sink. Remin stage fixes RO's flat taste.</td>
+          </tr>
+          <tr>
+            <td><b>Tank RO (traditional)</b></td>
+            <td class="num">$150–400</td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="yes">✓ 90–99%</span></td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td>Cheapest RO route; big cabinet footprint, ~3–4:1 waste, better for feeding a fridge line. Add a remin stage for taste.</td>
+          </tr>
+          <tr>
+            <td><b>Multi-stage carbon block</b> (Aquasana-class, NSF 53)</td>
+            <td class="num">$70–250</td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="yes">✓ If NSF 53</span></td>
+            <td>No waste water, high flow, easy install — but dissolved minerals and uranium pass straight through.</td>
+          </tr>
+          <tr>
+            <td><b>Ultrafiltration (UF)</b></td>
+            <td class="num">$60–200</td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="no">✗ Dissolved: no</span></td>
+            <td>Bacteria/sediment sieve — wrong tool for high-dissolved-mineral water like ours.</td>
+          </tr>
+          <tr>
+            <td><b>Simple inline / faucet-mount carbon</b></td>
+            <td class="num">$20–100</td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="yes">✓ Partial</span></td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="no">✗ Mostly no</span></td>
+            <td>Brita-class filtration in a different box. Contrast option only.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note"><b>Hard-water fine print:</b> at ~10–16 gpg, hardness will shorten an RO membrane's life (expect changes every 1–2 years instead of 2–5) — city water is gentler on membranes than raw well water, but it's worth adding a <b>$15–40 polyphosphate scale-inhibitor prefilter</b> as cheap insurance. A whole-house softener remains a worthwhile <em>separate</em> project for pipes, the water heater, and appliances — and it would extend the RO membrane's life too — but it isn't required to make the drinking-water plan work. Sources: <a href="https://www.frizzlife.com/blogs/guide/reverse-osmosis-for-hard-water-scale-control-membrane-life-buying-tips">RO on hard water</a>, <a href="https://www.freshwatersystems.com/blogs/blog/water-softener-vs-reverse-osmosis">softener vs. RO</a>, <a href="https://www.appliedmembranes.com/scale-filters-phosphate-filter-cartridges.html">scale-inhibitor cartridges</a>.</p>
   </section>
 
   <section id="uranium">
     <div class="kicker">The science</div>
     <h2>What actually removes uranium</h2>
-    <p class="lede">Uranium travels in water as dissolved uranyl-carbonate complexes. Only a few technologies capture it — and two popular ones don't. CT&nbsp;DPH calls point-of-use reverse osmosis "the most common type of treatment used for uranium removal and very effective."</p>
+    <p class="lede">At 2.3 ppb the system is far below the 30 ppb limit — but if the goal is "as close to zero as possible in our glasses," only some technologies get there. Uranium travels as dissolved uranyl-carbonate complexes, and CT DPH calls point-of-use reverse osmosis "the most common type of treatment used for uranium removal and very effective."</p>
     <div class="table-scroll">
       <table>
         <thead>
@@ -293,12 +442,12 @@
           <tr>
             <td><b>Reverse osmosis</b> (under-sink)</td>
             <td><span class="yes">✓ Yes — 90–99%</span></td>
-            <td>CT DPH's recommended approach for drinking water; membrane replaced every 2–3 years keeps performance up.</td>
+            <td>The health-department-endorsed approach for drinking water; membrane replaced on schedule keeps performance up.</td>
           </tr>
           <tr>
             <td><b>Anion exchange</b> (whole-house)</td>
             <td><span class="yes">✓ Yes — &gt;98%</span></td>
-            <td>Strong-base resin; the whole-house option if uranium ever approached or exceeded 30&nbsp;µg/L. Overkill for trace levels.</td>
+            <td>Strong-base resin; the whole-house option if uranium were ever near the limit. Overkill at trace levels.</td>
           </tr>
           <tr>
             <td><b>Distillation</b></td>
@@ -313,52 +462,52 @@
           <tr>
             <td><b>Water softener</b> (cation exchange)</td>
             <td><span class="no">✗ No</span></td>
-            <td>0–70% depending on pH, degrading as resin loads with calcium — WQA says it cannot be relied on for uranium. It has a different job (hardness).</td>
+            <td>0–70% depending on pH, degrading as resin loads with calcium — WQA says it cannot be relied on for uranium.</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="tbl-note">Uranium enters the body only through ingestion — not through skin or breathing — so showering and bathing are safe, and treating just the drinking-and-cooking tap is the standard, health-department-endorsed approach. Sources: <a href="https://wqa.org/wp-content/uploads/2022/09/2014_Uranium.pdf">WQA uranium fact sheet</a>, <a href="https://extension.media.uconn.edu/wp-content/uploads/sites/3795/2024/05/Water-Treatment-Guide-FINAL-1-16-24-2.pdf">UConn Extension treatment guide</a>, <a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/private_wells/2018-Downloads/050818-uranium_in_well_water_September_2016.pdf">CT DPH</a>.</p>
+    <p class="tbl-note">Uranium enters the body only through ingestion — not through skin or breathing — so showering is safe and treating just the drinking-and-cooking tap is the standard approach. Sources: <a href="https://wqa.org/wp-content/uploads/2022/09/2014_Uranium.pdf">WQA uranium fact sheet</a>, <a href="https://extension.media.uconn.edu/wp-content/uploads/sites/3795/2024/05/Water-Treatment-Guide-FINAL-1-16-24-2.pdf">UConn Extension treatment guide</a>, <a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/private_wells/2018-Downloads/050818-uranium_in_well_water_September_2016.pdf">CT DPH</a>.</p>
   </section>
 
   <section id="plan">
     <div class="kicker">The recommendation</div>
-    <h2>The setup that fits our house</h2>
-    <p class="lede">Every authority we checked — CT DPH, UConn Extension, the Water Quality Association — converges on the same architecture for hard well water with trace uranium.</p>
+    <h2>The plan, in four steps</h2>
     <div class="steps">
       <div class="step">
         <div class="num">1</div>
         <div>
-          <h3>Retest the well first</h3>
-          <p>Our test is years old, and CT DPH explicitly recommends re-running the basic panel <b>after any repair or replacement of water pipes</b> — which we've done. Uranium levels also fluctuate over time. UConn's Institute of Water Resources runs a subsidized mail-in panel (bacteria, nitrate, metals, hardness, lead, arsenic, <b>uranium</b>) that would normally cost $350+. Knowing today's uranium, hardness, iron, and pH numbers is what lets us size the equipment correctly instead of guessing.</p>
-          <span class="cost">$200–235 · UConn CTIWR kit</span>
+          <h3>Baseline test at our own tap</h3>
+          <p>Order the <b>Tap Score Advanced City Water test</b> and the <b>Cyclopure PFAS kit</b>. Take the lead/copper sample first-draw after an overnight of no water use. This tells us our tap's real lead, hardness, uranium, and PFAS numbers — the four things the utility's system-wide report can't — and Tap Score's report literally maps results to filter recommendations.</p>
+          <span class="cost">~$378 total</span>
         </div>
       </div>
       <div class="step">
         <div class="num">2</div>
         <div>
-          <h3>Whole-house water softener (NSF/ANSI 44)</h3>
-          <p>A salt-based ion-exchange softener fixes hardness everywhere — taste, scale, appliances — and it protects the RO membrane: on very hard feed water, softening upstream can stretch membrane life from ~18 months to ~4 years. Salt-free "TAC" conditioners are lower-maintenance but only condition scale; for genuinely very hard water, true softening is the safer call. (Don't worry about the added sodium — the RO removes it at the drinking tap.)</p>
-          <span class="cost">$1,200–3,800 installed + $60–300/yr salt</span>
+          <h3>Under-sink RO with remineralization at the kitchen</h3>
+          <p>This is the jug replacement: a dedicated faucet at the sink for all drinking and cooking water, plus a ~$20 quarter-inch line to the fridge and ice maker. Tankless if we value cabinet space and low waste; tank-style if we want the budget route. Either way: <b>NSF/ANSI 58 certification</b>, a <b>remineralization stage</b> so the water tastes like spring water rather than lab water, and a <b>polyphosphate prefilter</b> for membrane protection on our hard water. Specific models compared below.</p>
+          <span class="cost">$200–1,000 + ~$100–170/yr filters</span>
         </div>
       </div>
       <div class="step">
         <div class="num">3</div>
         <div>
-          <h3>Under-sink reverse osmosis at the kitchen (NSF/ANSI 58)</h3>
-          <p>This is the jug replacement: its own faucet at the sink covering all drinking and cooking water, with a $20 quarter-inch line teed to the fridge and ice maker. Look for NSF/ANSI&nbsp;58 certification with a <b>radium 226/228 reduction claim</b> (the closest certified radionuclide claim — no consumer RO carries a certified uranium-specific claim, but CT DPH endorses RO for uranium regardless) and a <b>remineralization stage</b> for taste.</p>
-          <span class="cost">$200–1,000 + ~$100–170/yr filters</span>
+          <h3>Install it — DIY or a licensed local pro</h3>
+          <p>All the consumer systems below ship as DIY kits (2–3 hours, basic tools). If we'd rather hire it out, Connecticut requires installers to hold a P1/P2 plumbing or J1/J2 water-conditioning license — verify anyone via <a href="https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx">CT DCP eLicense</a>. Verified local options are in the installer table below; a Valley plumber installing a system we buy ourselves is typically the cheapest pro route.</p>
+          <span class="cost">$0 DIY · $200–500 plumber</span>
         </div>
       </div>
       <div class="step">
         <div class="num">4</div>
         <div>
-          <h3>Licensed install, then verify</h3>
-          <p>Connecticut requires a P1/P2 plumbing or J1/J2 water-conditioning license for installers (verify via DCP, 860-263-6000). After startup, lab-test the RO's product water to confirm uranium is non-detect and TDS is low — then test before-and-after the system periodically to prove it keeps working. That before/after test is also the moment we cancel the jug service with confidence.</p>
-          <span class="cost">$200–500 plumber (or DIY the RO)</span>
+          <h3>Verify, then cancel the jugs</h3>
+          <p>After startup, a cheap TDS meter confirms the membrane is working day-to-day (product water should read a small fraction of tap water), and a follow-up lab test on the RO's output closes the loop on lead, uranium, and PFAS. That's the day the delivery service gets cancelled.</p>
+          <span class="cost">~$15 TDS meter + optional retest</span>
         </div>
       </div>
     </div>
+    <div class="aside"><b>The softener question.</b> A whole-house softener ($1,200–3,800 installed, plus $60–300/yr salt) is a comfort-and-appliances decision, not a drinking-water requirement: it would stop scale on fixtures and the water heater, and stretch the RO membrane's life — but the RO handles hardness in the drinking water by itself. Our take: do the RO now, revisit the softener if the baseline test comes back at the hard end of the 4–16 gpg range.</div>
   </section>
 
   <section id="systems">
@@ -380,13 +529,22 @@
         </thead>
         <tbody>
           <tr>
-            <td><b>Home Master TMAFC-ERP</b><span class="pill">OUR PICK</span></td>
+            <td><b>Home Master TMAFC-ERP</b><span class="pill">TANK PICK</span></td>
             <td class="num">~$430</td>
             <td>Tank + permeate pump</td>
             <td><span class="yes">✓ Yes</span> (Ca/Mg, 2-pass)</td>
             <td><span class="no">✗ Components only</span></td>
             <td class="num">~$99</td>
             <td><b>1:1</b> (best in class)</td>
+          </tr>
+          <tr>
+            <td><b>Waterdrop G3P800</b><span class="pill">TANKLESS PICK</span></td>
+            <td class="num">~$700–1,000</td>
+            <td><b>Tankless</b>, 800 GPD</td>
+            <td><span class="no">✗ Separate model</span></td>
+            <td><span class="yes">✓ Certified</span> (42, 53, 58, 372)</td>
+            <td class="num">~$155</td>
+            <td>3:1 <i>pure</i>:drain</td>
           </tr>
           <tr>
             <td><b>iSpring RCC7AK</b></td>
@@ -425,15 +583,6 @@
             <td>Not published</td>
           </tr>
           <tr>
-            <td><b>Waterdrop G3P800</b></td>
-            <td class="num">~$700–1,000</td>
-            <td><b>Tankless</b>, 800 GPD</td>
-            <td><span class="no">✗ Separate model</span></td>
-            <td><span class="yes">✓ Certified</span> (42, 53, 58, 372)</td>
-            <td class="num">~$155</td>
-            <td>3:1 <i>pure</i>:drain</td>
-          </tr>
-          <tr>
             <td><b>Culligan Aqua-Cleer</b> (pro)</td>
             <td class="num">$1,050–1,700 installed</td>
             <td>Tank, dealer-built</td>
@@ -445,7 +594,85 @@
         </tbody>
       </table>
     </div>
-    <p class="tbl-note"><b>Why the Home Master is our pick:</b> it's designed for well water, wastes the least (a permeate pump brings it to ~1:1 where typical tank systems send 3 gallons to the drain per gallon made), its two-pass remineralization is the best-reviewed for taste, and annual filter cost is lowest. The trade-off: the system itself isn't NSF/ANSI 58 certified (it uses certified components). If end-to-end certification matters most, the iSpring RCC7AK at ~$200 or the Aquasana SmartFlow are the certified picks. Whichever we choose, the softener upstream (step 2) is what keeps the membrane alive on our water.</p>
+    <p class="tbl-note"><b>How we'd choose:</b> the Home Master TMAFC-ERP is the value pick — least waste (1:1 vs. 3 gallons drained per gallon made on typical tank units), best-reviewed remineralization, lowest running cost — though the system as a whole isn't NSF 58 certified (it uses certified components). The Waterdrop G3P800 is the premium tankless route: certified end-to-end, shoebox footprint, on-demand flow — but pair it with Aquasana's PFAS-rated filters in mind if the PFAS test comes back positive, or step to the Aquasana SmartFlow, which is certified for PFOA/PFOS reduction (NSF P473) — relevant given the system's 4 ppt detections.</p>
+  </section>
+
+  <section id="installers">
+    <div class="kicker">Local help</div>
+    <h2>Installers who serve the Farmington Valley</h2>
+    <p class="lede">Verified as real, current businesses (August 2026) that install under-sink RO and water treatment around Simsbury. Before hiring anyone: confirm they serve our address, and check their P1/P2 or J1/J2 license on <a href="https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx">CT DCP eLicense</a>.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Based in</th>
+            <th>Phone</th>
+            <th>What they do</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Farmington Valley Plumbing</b></td>
+            <td>East Granby</td>
+            <td>(860) 924-4770</td>
+            <td>Plumber — RO, softeners, carbon filtration</td>
+            <td>Local to the Valley with a dedicated Simsbury page; publishes P1 license. Likely cheapest pro route for a system we buy ourselves — ask if they install owner-supplied units.</td>
+          </tr>
+          <tr>
+            <td><b>Total Mechanical Systems</b></td>
+            <td>Plainville</td>
+            <td>(860) 342-8867</td>
+            <td>EcoWater dealer — softeners, under-sink RO, full plumbing</td>
+            <td>Strongest review signal nearby (Angi 4.6, BBB A+); money-back guarantee; publishes P1 license.</td>
+          </tr>
+          <tr>
+            <td><b>CTSoftWater</b></td>
+            <td>Glastonbury</td>
+            <td>(860) 791-4799</td>
+            <td>Independent — softeners, under-sink RO</td>
+            <td>Simsbury is a featured service town; free in-home consult; lifetime warranty on installed systems.</td>
+          </tr>
+          <tr>
+            <td><b>Drainworks Plumbing &amp; Septic</b></td>
+            <td>Colchester</td>
+            <td>(860) 292-0484</td>
+            <td>Plumber — RO, softeners, UV</td>
+            <td>Google 4.8 with ~1,250 reviews; publishes Simsbury-specific service pages; free quotes.</td>
+          </tr>
+          <tr>
+            <td><b>Eastern Water Solutions</b></td>
+            <td>Oxford</td>
+            <td>(475) 234-0264</td>
+            <td>Independent — softeners, RO, testing</td>
+            <td>Hartford County page explicitly lists Simsbury, Avon, Granby; free estimates.</td>
+          </tr>
+          <tr>
+            <td><b>Aqua Pump Co.</b></td>
+            <td>Stafford Springs</td>
+            <td>(800) 642-0420</td>
+            <td>Independent (Evolve dealer) — RO, softeners, uranium treatment</td>
+            <td>Family-owned since 1973; service area includes Simsbury, Granby, Avon, Canton.</td>
+          </tr>
+          <tr>
+            <td><b>Culligan of Windsor</b></td>
+            <td>Windsor</td>
+            <td>(860) 787-0621</td>
+            <td>Culligan dealer — softeners, Aqua-Cleer RO</td>
+            <td>Free in-home water test; rental options ($10–30/mo) mean zero upfront. Confirm Simsbury coverage when calling.</td>
+          </tr>
+          <tr>
+            <td><b>Greco &amp; Haines</b></td>
+            <td>Derby</td>
+            <td>(800) 922-2958</td>
+            <td>Water-treatment specialist — RO, softeners</td>
+            <td>60+ years in business; states statewide CT coverage.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">Kinetico has no confirmed dealer covering Hartford County — their <a href="https://www.kinetico.com/find-your-water-expert/">dealer locator</a> can confirm current territory if that brand matters. Culligan of Windsor is the Culligan dealership for this part of the state.</p>
   </section>
 
   <section id="money">
@@ -470,20 +697,21 @@
         </div>
       </details>
     </div>
-    <p class="tbl-note">Assumptions: jugs $630/yr (midpoint of $480–780). DIY RO: $450 upfront (Home Master TMAFC-ERP + fridge kit), $99/yr filters — breaks even in ~10 months. Pro route: $1,100 upfront (Waterdrop G3P800 + plumber install), $155/yr filters — breaks even around 2¼ years. Five-year totals: jugs ~$3,150 · DIY RO ~$945 · pro RO ~$1,875. RO wastewater cost on a private well is effectively a few dollars a year. The whole-house softener isn't charged to this comparison — it benefits the entire house (scale, appliances, laundry), not just drinking water.</p>
+    <p class="tbl-note">Assumptions: jugs $630/yr (midpoint of $480–780). DIY RO: $450 upfront (Home Master TMAFC-ERP + fridge kit), $99/yr filters — breaks even in ~10 months. Pro route: $1,100 upfront (Waterdrop G3P800 + plumber install), $155/yr filters — breaks even around 2¼ years. Five-year totals: jugs ~$3,150 · DIY RO ~$945 · pro RO ~$1,875. RO reject water at city rates adds only a few dollars a year. The baseline test (~$378) applies equally to every path, including staying on jugs — knowing what's in the tap is worth it either way.</p>
   </section>
 
   <section id="actions">
     <div class="kicker">Next steps</div>
     <h2>The action plan</h2>
     <ul class="checklist">
-      <li><span class="box"></span><span><b>Order the UConn CTIWR well test kit</b> ($200–235, includes uranium and hardness) — or use a CT-certified lab like Phoenix Environmental in Manchester, (860)&nbsp;645-1102. CT DPH Private Well Program can advise: (860)&nbsp;509-7296.</span></li>
-      <li><span class="box"></span><span><b>Also test radon in air/water</b> — radon comes from the same bedrock uranium chain, and CT DPH links the two; a uranium detection is a nudge to check radon too.</span></li>
-      <li><span class="box"></span><span><b>Get 2–3 softener quotes</b> from licensed (P1/P2 or J1/J2) installers, sized to the tested hardness number — not to a salesperson's estimate.</span></li>
-      <li><span class="box"></span><span><b>Buy and install the under-sink RO</b> (pick from the table above), with the fridge/ice-maker tee kit.</span></li>
-      <li><span class="box"></span><span><b>Lab-test the RO's output water</b> — confirm uranium non-detect and low TDS.</span></li>
+      <li><span class="box"></span><span><b>Download Aquarion's free 2025 Simsbury water quality report</b> (<a href="https://www.aquarionwater.com/water-quality/water-quality-reports">aquarionwater.com</a>) — the system-level baseline costs nothing.</span></li>
+      <li><span class="box"></span><span><b>Order the Tap Score Advanced City Water test ($299) + Cyclopure PFAS kit ($79).</b> Collect the lead/copper sample first-draw after 6+ hours of no water use.</span></li>
+      <li><span class="box"></span><span><b>Read the results against this page:</b> hardness number → softener decision; lead present → RO or NSF 53 stage confirmed; PFAS detected → prefer the PFAS-certified models (Aquasana SmartFlow, AO Smith).</span></li>
+      <li><span class="box"></span><span><b>Pick the RO system</b> — tankless (Waterdrop G3P800) or tank (Home Master TMAFC-ERP), with remineralization and a polyphosphate prefilter — plus the fridge/ice-maker tee kit.</span></li>
+      <li><span class="box"></span><span><b>DIY the install, or get quotes from 2–3 installers above</b> — verify licenses on <a href="https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx">CT DCP eLicense</a> first.</span></li>
+      <li><span class="box"></span><span><b>Verify the output</b> — TDS meter weekly at first, and an optional lab retest of the RO water for lead/uranium/PFAS.</span></li>
       <li><span class="box"></span><span><b>Cancel the jug delivery service.</b> 🎉</span></li>
-      <li><span class="box"></span><span><b>Recurring:</b> RO filters every 6–12 months, membrane every 2–3 years, softener salt monthly, re-test uranium/arsenic/radon every ~5 years and the basic panel annually.</span></li>
+      <li><span class="box"></span><span><b>Recurring:</b> RO filters every 6–12 months, membrane every 1–2 years on our hard water (longer if we ever add a softener), retest at the tap every few years.</span></li>
     </ul>
   </section>
 
@@ -491,24 +719,26 @@
     <div class="kicker">Receipts</div>
     <h2>Sources</h2>
     <ul class="sources">
-      <li><a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/private_wells/2018-Downloads/050818-uranium_in_well_water_September_2016.pdf">CT DPH — Uranium in Private Well Water (fact sheet)</a></li>
-      <li><a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/eoha/pdf/24ResidentialDrinkingWaterWellTestingpdf.pdf">CT DPH Publication 24 — Private Well Testing Recommendations</a></li>
-      <li><a href="https://extension.media.uconn.edu/wp-content/uploads/sites/3795/2024/05/Water-Treatment-Guide-FINAL-1-16-24-2.pdf">UConn Extension — Managing Your Private Well: Testing &amp; Treatment Guide</a></li>
-      <li><a href="https://www.usgs.gov/news/new-report-shows-some-private-wells-connecticut-test-high-naturally-occurring-arsenic-uranium">USGS — Arsenic &amp; Uranium in Connecticut Private Wells (2013–15 study)</a></li>
-      <li><a href="https://www.usgs.gov/publications/arsenic-and-uranium-occurrence-private-wells-connecticut-2013-18-a-spatially-weighted">USGS — Spatially Weighted Analysis, CT Wells 2013–18</a></li>
-      <li><a href="https://wqa.org/wp-content/uploads/2022/09/2014_Uranium.pdf">Water Quality Association — Uranium Technical Fact Sheet</a></li>
-      <li><a href="https://www.aquarionwater.com/docs/default-source/water-quality/water-quality-reports/ct/2023/simsbury_ccr_2023.pdf">Aquarion — Simsbury System Water Quality Report (hardness data)</a></li>
+      <li><a href="https://www.aquarionwater.com/docs/default-source/water-quality/water-quality-reports/ct/2025/simsbury_ct_wqr_final.pdf">Aquarion — 2025 Simsbury System Water Quality Report</a></li>
+      <li><a href="https://www.aquarionwater.com/water-quality/water-quality-reports">Aquarion — Water Quality Reports portal</a></li>
+      <li><a href="https://mytapscore.com/products/advanced-city-water-test">SimpleLab Tap Score — Advanced City Water Test</a></li>
+      <li><a href="https://mytapscore.com/products/essential-water-test">Tap Score — Essential City Water Test</a></li>
+      <li><a href="https://cyclopure.com/product/wtk/">Cyclopure — PFAS Water Test Kit</a></li>
+      <li><a href="https://etrlabs.com/product/premium-water-test/">ETR Labs — Premium Water Test</a></li>
+      <li><a href="https://watercheck.com/collections/city-water-tests">National Testing Laboratories — CityCheck</a></li>
       <li><a href="https://www.usgs.gov/water-science-school/science/hardness-water">USGS — Water Hardness Classification</a></li>
+      <li><a href="https://wqa.org/wp-content/uploads/2022/09/2014_Uranium.pdf">Water Quality Association — Uranium Technical Fact Sheet</a></li>
+      <li><a href="https://extension.media.uconn.edu/wp-content/uploads/sites/3795/2024/05/Water-Treatment-Guide-FINAL-1-16-24-2.pdf">UConn Extension — Water Treatment Guide</a></li>
+      <li><a href="https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/environmental_health/private_wells/2018-Downloads/050818-uranium_in_well_water_September_2016.pdf">CT DPH — Uranium in Well Water (treatment guidance)</a></li>
       <li><a href="https://www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems">NSF — NSF/ANSI 58 Reverse Osmosis Standard</a></li>
       <li><a href="https://info.nsf.org/Certified/DWTU/Listings.asp?Standard=058&amp;hdModlStd=ModlStd">NSF Certified Products Database (Standard 58)</a></li>
-      <li><a href="https://ctiwr.uconn.edu/well-testing/">UConn CT Institute of Water Resources — Well Testing Kits</a></li>
-      <li><a href="https://www.phoenixlabs.com/">Phoenix Environmental Laboratories, Manchester CT (DPH-certified)</a></li>
-      <li><a href="https://portal.ct.gov/dph/environmental-health/private-well-water-program/private-well-water-treatment---how-to-get-started-and-helpful-resources">CT DPH — Private Well Treatment: How to Get Started</a></li>
-      <li><a href="https://novascotia.ca/nse/water/uraniumremovalro.asp">Nova Scotia Environment — Uranium Removal by RO (field data)</a></li>
-      <li><a href="https://www.wupdhd.org/what-you-need-to-know-about-uranium/">Western UP Health Dept — Uranium in Drinking Water</a></li>
+      <li><a href="https://www.frizzlife.com/blogs/guide/reverse-osmosis-for-hard-water-scale-control-membrane-life-buying-tips">Frizzlife — RO on Hard Water: Scale &amp; Membrane Life</a></li>
+      <li><a href="https://www.freshwatersystems.com/blogs/blog/water-softener-vs-reverse-osmosis">Fresh Water Systems — Softener vs. Reverse Osmosis</a></li>
+      <li><a href="https://www.waterdropfilter.com/blogs/buyers-guides/unveiling-the-truth-about-ro-tank-vs-tankless-which-wins">Waterdrop — Tank vs. Tankless RO</a></li>
+      <li><a href="https://portal.ct.gov/dcp/occupational-and-professional-division/occupational--profess/plumbing-licenses-and-scope-of-work">CT DCP — Plumbing &amp; Water-Conditioning License Scopes</a></li>
+      <li><a href="https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx">CT DCP — eLicense Lookup (verify installers)</a></li>
       <li><a href="https://homeguide.com/costs/water-delivery-cost">HomeGuide — Water Delivery Cost (2026)</a></li>
       <li><a href="https://homeguide.com/costs/reverse-osmosis-system-cost">HomeGuide — Reverse Osmosis System Cost</a></li>
-      <li><a href="https://www.homemasterfilters.com/replacementfilters.html">Home Master — Replacement Filter Pricing</a></li>
     </ul>
   </section>
 
@@ -516,8 +746,8 @@
 
 <footer>
   <div class="wrap">
-    <p><b>About this page.</b> A family research project for our home in Simsbury, CT — compiled August 2026 with the help of Claude Code from public health guidance, USGS studies, and current retail pricing. It's a plan, not professional advice: the whole thing starts with a fresh certified lab test, and equipment choices should be sized to those results by a licensed installer.</p>
-    <p>Prices and links checked August 2, 2026. Hardness figures are area averages from the public Aquarion Simsbury system, not our specific well.</p>
+    <p><b>About this page.</b> A family research project for our home in Simsbury, CT — on Aquarion city water — compiled August 2026 with the help of Claude Code from the utility's published water quality data, health-agency guidance, and current retail pricing. It's a plan, not professional advice: it starts with a certified lab test at our own tap, and any hired install should be by a CT-licensed contractor.</p>
+    <p>Prices and links checked August 2, 2026. System-level water data is from Aquarion's 2025 Simsbury report; our tap may differ — that's what the baseline test is for.</p>
   </div>
 </footer>
 
