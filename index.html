@@ -785,7 +785,7 @@
         </div>
       </details>
     </div>
-    <p class="tbl-note">Assumptions: jugs $630/yr (midpoint of $480–780). DIY RO: $480 upfront (Home Master TMAFC-ERP + fridge kit + prefilter), $135/yr to run (filters + membrane on our hard water + drain water) — breaks even in ~12 months. Pro route: $1,340 all-in (Waterdrop G3P600 + plumber + outlet + fridge line + faucet hole — the matrix's midpoint), $261/yr to run — breaks even around 3½ years. Five-year totals: jugs ~$3,150 · DIY RO ~$1,155 · pro tankless RO ~$2,645. A plumber-installed Home Master (~$970 all-in, $135/yr) lands at ~$1,645 over five years. Running costs use the same formula as the <a href="ro-matrix.html">full comparison matrix</a>. The baseline test (~$378) applies equally to every path, including staying on jugs — knowing what's in the tap is worth it either way.</p>
+    <p class="tbl-note">Assumptions: jugs $630/yr (midpoint of $480–780). DIY RO: $480 upfront (Home Master TMAFC-ERP + fridge kit + prefilter), $146/yr to run (filters + membrane on our hard water + drain water incl. sewer) — breaks even in ~12 months. Pro route: $1,340 all-in (Waterdrop G3P600 + plumber + outlet + fridge line + faucet hole — the matrix's midpoint), $267/yr to run — breaks even around 3¾ years. Five-year totals: jugs ~$3,150 · DIY RO ~$1,210 · pro tankless RO ~$2,675. A plumber-installed Home Master (~$970 all-in, $146/yr) lands at ~$1,700 over five years. Running costs use the same formula as the <a href="ro-matrix.html">full comparison matrix</a>. The baseline test (~$378) applies equally to every path, including staying on jugs — knowing what's in the tap is worth it either way.</p>
   </section>
 
   <section id="actions">
@@ -849,8 +849,8 @@
   var MONTHS = 60;
   var series = [
     { name: "Jug delivery",      cssVar: "--series-1", f: function (m) { return 52.5 * m; } },
-    { name: "DIY RO",            cssVar: "--series-2", f: function (m) { return m === 0 ? 480 : 480 + (135 / 12) * m; } },
-    { name: "Pro tankless RO",   cssVar: "--series-3", f: function (m) { return m === 0 ? 1340 : 1340 + (261 / 12) * m; } }
+    { name: "DIY RO",            cssVar: "--series-2", f: function (m) { return m === 0 ? 480 : 480 + (146 / 12) * m; } },
+    { name: "Pro tankless RO",   cssVar: "--series-3", f: function (m) { return m === 0 ? 1340 : 1340 + (267 / 12) * m; } }
   ];
 
   var chartEl = document.getElementById("chart");
@@ -907,7 +907,7 @@
     svg.setAttribute("width", W);
     svg.setAttribute("height", H);
     svg.setAttribute("role", "img");
-    svg.setAttribute("aria-label", "Line chart: cumulative five-year cost. Jug delivery reaches about $3,150; DIY RO about $1,155; pro tankless RO about $2,645.");
+    svg.setAttribute("aria-label", "Line chart: cumulative five-year cost. Jug delivery reaches about $3,150; DIY RO about $1,210; pro tankless RO about $2,675.");
 
     function el(name, attrs) {
       var e = document.createElementNS(NS, name);
