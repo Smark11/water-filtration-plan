@@ -274,14 +274,33 @@
   <div class="verdict" style="background:var(--surface-1);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:20px 22px;max-width:none">
     <p><strong>If you just want the answer:</strong></p>
     <ul style="margin:8px 0 0 1.2em;color:var(--text-secondary)" id="verdict-list"></ul>
-    <p class="tbl-note" style="margin-top:10px">Versus jug delivery at ~$630/yr. The table below is the appendix for second-guessing these.</p>
+    <p class="tbl-note" style="margin-top:10px">Versus jug delivery at ~$630/yr. The five-row table and the cards below are the reasoning; the glossary and the 37-row table after them are for second-guessing.</p>
   </div>
 </section>
 
+
+
+
+
+<section id="five" style="padding-top:20px">
+  <div class="kicker">Shortlist</div>
+  <h2>If you only look at five</h2>
+  <p class="tbl-note" style="margin:0 0 8px">One per situation in the shortlist below: value · certified badge · tankless · tankless-without-an-outlet · PFAS paperwork. (The G3P800 isn't here because the G3P600 is the same thing cheaper; see the tankless card.)</p>
+  <div class="table-scroll"><table class="matrix" id="m5"><thead></thead><tbody></tbody></table></div>
+    <p class="tbl-note">Symbols: <span class="yes">✓</span> yes · <span class="no">✗</span> no · <span class="meh">◐ components</span> every cartridge certified, assembled box not listed · <span class="meh">~</span> likely / maker claim · <span class="meh">—</span> not published.</p>
+</section>
+
+<section id="picks">
+  <div class="kicker">Shortlist, explained</div>
+  <h2>Which one, for which situation</h2>
+  <div class="picks" id="picks"></div>
+  <p class="tbl-note">These are our reads of the data above, not sponsorships. The index page's <a href="index.html#basement">basement-on-the-fridge-line</a> plan uses the Home Master; the under-sink plan uses the G3P800; for hot water, the G3P800 + InSinkErator combo.</p>
+</section>
+
 <section id="read">
-  <div class="kicker">Before you read the table</div>
-  <h2>The twelve terms that decide everything</h2>
-  <div class="glossary">
+  <div class="kicker">Before you read the full table</div>
+  <details open><summary style="cursor:pointer"><h2 style="display:inline">The twelve terms that decide everything</h2></summary>
+  <div class="glossary" style="margin-top:14px">
     <div><b>Tank vs. tankless.</b> A <i>tank</i> unit slowly fills a 3–4 gallon pressure tank under the sink: water is ready instantly, it can push to a fridge line, and most need no electricity. A <i>tankless</i> unit makes water on demand with an electric pump — shoebox footprint, never-stale water, but nearly all need an outlet under the sink (the Frizzlife M800 is the one exception on this table) and fridge-line support varies — check the column, don't assume.</div>
     <div><b>GPD (gallons per day).</b> Rated membrane output. Below ~25 GPD (AO Smith, Whirlpool) you can run the tank dry on a big cooking day and wait an hour; above that, any number is plenty. Usable tank volume is about two-thirds of the rated size. Tankless units need 400+ GPD to fill a glass quickly. Not a reason to pay more.</div>
     <div><b>Gallons drained per gallon made (lower is better).</b> RO sends mineral-rich reject water down the drain. We converted every maker's ratio into this one number so it sorts and compares honestly: a pumped Home Master drains 1.0, a basic tank unit 3.0, a Waterdrop G3P800 0.33 (makers sometimes quote "recovery %" instead — pure ÷ total — so 29% recovery = 2.4 drained). The "$/yr" next to it is that water at Aquarion's ~1¢/gal for 3 gallons of drinking water a day — i.e. $3–44/yr on the water bill — roughly double that if the house is on town sewer, since sewer is billed on water used. Either way it's under $90/yr and is already folded into "Running cost/yr". Where it's a real problem is a septic system or a well pump, which have to handle the extra gallons. The maker's own ratio is shown next to our number, because the box will say "3:1" whichever way they mean it.</div>
@@ -290,20 +309,22 @@
     <div><b>Stages.</b> Marketing. "10-stage" often means six cartridges with sub-layers counted separately. Every system here has the three that matter: sediment/carbon prefilter → RO membrane → carbon polish. Ignore the number.</div>
     <div><b>NSF/ANSI certification — what the numbers mean.</b> <b>WQA Gold Seal</b> = the same tests run by the Water Quality Association instead of NSF — equally good. <b>58</b> = the assembled RO system was independently tested and works as claimed (lead, arsenic, TDS…). <b>53</b> = health contaminants; <b>401</b> = pharmaceuticals; <b>P473</b> = PFOA/PFOS ("PFAS"); <b>P231</b> = bacteria/virus; <b>372</b> = only means the metal parts are lead-free — it says nothing about filtering. <b>"Components certified"</b> (Home Master) means each cartridge and membrane carries a certification but nobody tested the assembled box — it works, it's just un-badged. <b>"SGS-tested"</b> (Frizzlife, SimPure) means the maker paid a commercial lab to run the NSF test method once; it's not the ongoing audited listing a real NSF mark is. Every RO membrane removes hardness and uranium (Aquarion's wells carry 2.3 ppb) regardless of badges.</div>
     <div><b>Needs outlet.</b> Tankless pumps, electric booster pumps, UV lamps and instant-hot heaters need a GFCI outlet under the sink. Most kitchens have one for the disposal — look for a regular wall receptacle under the sink (a disposal wired directly into a box doesn't count). If there isn't one, an electrician adds it for $150–350 (no permit for a single receptacle in Simsbury; a 1,200 W instant-hot heater should be on its own 20 A circuit, which is the upper end of that range). Tank units without a pump run on water pressure alone: no outlet, no electrician.</div>
-    <div><b>Pumps — why the top pick needs no electrician.</b> A <i>permeate pump</i> (Home Master "ERP") is a water-powered gadget that cuts waste to 1:1 — no electricity, no outlet. A <i>booster pump</i> (iSpring "P", all tankless units) is electric and needs the outlet.</div>
-    <div><b>Fridge line.</b> Whether the maker supports tee-ing the output to a refrigerator/ice maker. Tank units generally yes; tankless units are hit-or-miss (some need a $50–80 mini-tank). "~ likely" means a tank unit whose maker doesn't say — tank pressure is what a fridge needs, so it almost certainly works; "~ via mini-tank" means a tankless unit that needs a $50–80, ~1-gallon pressure tank added inline (about the size of a coffee can, sits beside the unit) so the fridge solenoid has something to draw from. Confirm with the maker before buying if the fridge is your main use. Running the line is +$75–200 of labor on any of them — it's the same ¼" tube whether the RO sits under the sink or in the basement.</div>
+    <div><b>Pumps — why the top pick needs no electrician.</b> "Permeate" is just the clean water coming off the membrane. A <i>permeate pump</i> (Home Master "ERP") is a small piston driven by the pressure of the reject water on its way to the drain, which it uses to push the clean water into the tank — no electricity, no outlet; it cuts waste to 1:1. A <i>booster pump</i> (iSpring "P", all tankless units) is electric and needs the outlet.</div>
+    <div><b>Fridge line.</b> Whether the maker supports tee-ing the output to a refrigerator/ice maker. Tank units generally yes; tankless units are hit-or-miss (some need a $50–80 mini-tank). "~ likely" means a tank unit whose maker doesn't say — tank pressure is what a fridge needs, so it almost certainly works; "~ via mini-tank" means a tankless unit that needs a $50–80, ~1-gallon pressure tank added inline (about the size of a coffee can, sits beside the unit) so the fridge solenoid has something to draw from. Confirm with the maker before buying if the fridge is your main use. Running the line is +$75–200 of labor on any of them: our fridge tube already exists, so this is the plumber cutting it and tee-ing the RO output into it — the same job whether the RO sits under the sink or in the basement.</div>
     <div><b>gpg / hardness.</b> Grains per gallon; Aquarion Simsbury runs 10–16 gpg ("hard" to "very hard"). Hardness shortens RO membrane life — plan on the low end of any claim here, or add a $15–40 polyphosphate prefilter to protect it. See <a href="index.html#basement">the main plan</a>.</div>
-    <div><b>Filter changes, leaks, noise.</b> Every system here is a homeowner job: shut the feed valve, twist or pull cartridges, 10–20 minutes, once or twice a year. Twist-in heads (Aquasana, Whirlpool, Waterdrop, Frizzlife, Brondell) are tidier than the classic three-canister tank units (iSpring, APEC, Express) whose push-fit tubing is the usual leak point. Only the Culligan Smart has leak shutoff; a $10 water-alarm puck under the cabinet covers the rest. Tankless pumps hum at 40–50 dB (a quiet dishwasher) for 10–30 s per glass; tank units are silent.</div>
+    <div><b>Filter changes, leaks, noise.</b> Every system here is a homeowner job: shut the feed valve, twist or pull cartridges, 10–20 minutes; the "Filter changes" column says how often for each model. "Push-fit" tubing is the ¼" plastic tube you push into a collar to connect — convenient, and the usual drip point if not seated. A "drain saddle" is a clamp with a ¼" hole that sits on the sink drain pipe for the reject water. GFCI = the outlet with the test/reset buttons. Twist-in heads (Aquasana, Whirlpool, Waterdrop, Frizzlife, Brondell) are tidier than the classic three-canister tank units (iSpring, APEC, Express) whose push-fit tubing is the usual leak point. Only the Culligan Smart has leak shutoff; a $10 water-alarm puck under the cabinet covers the rest. Tankless pumps hum at 40–50 dB (a quiet dishwasher) for 10–30 s per glass; tank units are silent.</div>
   </div>
   <div class="tbl-note" style="max-width:none"><b>Cost columns, defined once.</b>
     <ul style="margin:6px 0 0 1.2em">
       <li><b>Unit</b> — what the store charges. Faucet, tubing and drain saddle are in the box on every consumer unit.</li>
-      <li><b>Plumber-installed</b> (table) — unit + $200–450 labor (1.5–3 h) + $150–350 for an under-sink outlet when the unit needs power.</li>
-      <li><b>All-in at our house</b> (picks, with an "expect about" midpoint) — plumber-installed + the fridge line (+$75–200 labor, plus the maker's fridge kit or a $50–80 mini-tank where needed; left out only for units that can't feed a fridge at all) + a faucet hole in a stainless sink (+$50–150; granite is +$150–300; $0 if there's a spare sprayer hole) + the first remin cartridge on "add-on" units. <i>Worked example, Home Master: $380 unit + $325 plumber + $140 fridge + $100 hole ≈ $945.</i></li>
-      <li><b>DIY</b> — you buy the parts and hire nobody: unit + fridge kit/mini-tank + remin cartridge + ~$50 of fittings and a hole-saw bit. Assumes an outlet already exists where one is needed.</li>
-      <li><b>Running cost/yr</b> — yearly filters + membrane (capped at 2 years for our hard water) + remin cartridge replacement + electricity (~$6 tankless pump, ~$50 instant-hot) + drain water at Aquarion rates (doubled when the sewer box is ticked). Sized at 3 gallons a day: jugs supply us ~1 gal/day now, but once it's free you cook with it and fill bottles — at 1 gal/day every running cost drops $10–30 and the paybacks shorten a little.</li>
+      <li><b>Plumber-installed</b> (table) — unit + $200–450 labor (1.5–3 h) + $150–350 for an under-sink outlet when the unit needs power (tick "I already have an outlet" above the table to drop that).</li>
+      <li><b>All-in at our house</b> (picks, with an "expect about" midpoint) — plumber-installed + the fridge line (+$75–200 labor, plus the maker's fridge kit or a $50–80 mini-tank where needed; left out only for units that can't feed a fridge at all) + a faucet hole in a stainless sink (+$50–150; granite is +$150–300; $0 if there's a spare sprayer hole) + the first remin cartridge on "add-on" units. <i>Worked example, Home Master: $380 unit + $325 plumber + $138 fridge + $100 hole ≈ $940. The "expect about" figure is the midpoint; the named swings on each card say what moves it.</i></li>
+      <li><b>DIY</b> — you buy the parts and hire nobody: unit + fridge kit/mini-tank + remin cartridge + ~$50 of fittings and a hole-saw bit. Assumes an outlet already exists where one is needed. Shown in dollars on every pick.</li>
+      <li><b>Not in any figure:</b> the optional $15–40 polyphosphate scale prefilter (+~$20/yr) that protects the membrane on our hard water, and the ~$378 baseline test.</li>
+      <li><b>Running cost/yr</b> — yearly filters + membrane (capped at 2 years for our hard water) + remin cartridge replacement + electricity (~$6 tankless pump, ~$50 instant-hot) + drain water at Aquarion rates (doubled when the sewer box is ticked). Sized at 3 gallons a day: jugs supply us ~1 gal/day now, but once it's free you cook with it and fill bottles — at 1 gal/day every running cost drops $10–30 and the paybacks shorten by a month or two.</li>
       <li>Warranties: 1 year is standard online (3 with registration at iSpring/APEC); Home Master's 5 and Culligan's 10 are genuinely better.</li>
     </ul></div>
+  </details>
   <details style="margin-top:28px"><summary style="cursor:pointer;font-weight:600;font-size:18px">Things nobody tells you until after you buy</summary>
   <div class="glossary" style="margin-top:12px">
     <div><b>Test anyway — but don't wait to buy.</b> Aquarion's report covers the system, not our tap. The <a href="index.html#baseline">$299 Tap Score panel plus the $79 PFAS kit (~$378)</a> on the main plan tells us hardness, lead from our own pipes, and whether PFAS is present (the system has had 4 ppt detections — below limits, but that's why "PFAS paperwork" is a shortlist category).</div>
@@ -318,7 +339,7 @@
     <div><b>Cold water.</b> Jug coolers chill; RO at the faucet comes out tap-temperature. Most families just keep a pitcher in the fridge or use the fridge dispenser (that's what the fridge line is for). Chilled-on-demand at the sink is the Frizzlife CW5000 in the add-ons, ~$550–850 installed.</div>
     <div><b>How long the box lasts.</b> Tank units are plumbing — 10–15 years with filter changes; tankless units have pumps and electronics, figure 7–10. The value picks pay back in 1–3 years, well inside that; the hot-water routes can take 5–7 years to pay back, so treat hot water as a comfort purchase, not a money-saver. Replacement filters: Amazon, Home Depot or the maker, all with optional subscriptions; Home Master/iSpring/APEC use standard 10" cartridges that any brand fits.</div>
     <div><b>Sewer or septic?</b> Look at the water bill: a sewer line item means town sewer (drain water costs roughly double the figure shown); no line item means septic (cost is nil, but a 3:1 unit sends ~3,000 extra gallons a year into the tank — favor a 1:1 unit).</div>
-    <div><b>Pour rate.</b> Tank units pour about 0.5–1 gallon a minute until the tank's ~2 usable gallons are gone, then trickle; a stockpot is a minute. Tankless units pour ~0.4–0.6 gpm indefinitely. Faucets come in chrome/brushed nickel/black on most; Culligan's quote doesn't include one.</div>
+    <div><b>Pour rate.</b> Tank units pour about 0.5–1 gallon a minute until the tank's ~2 usable gallons are gone, then trickle; a stockpot is a minute. Tankless units pour ~0.4–0.6 gallons per minute indefinitely. Faucets come in chrome/brushed nickel/black on most; Culligan's quote doesn't include one.</div>
     <div><b>If it leaks.</b> Same risk DIY or pro: the push-fit tubing. A $10 water-alarm puck under the cabinet and a $25 auto-shutoff leak valve on the feed cover it. DIY doesn't void any warranty here.</div>
     <div><b>Who installs it.</b> The main plan's <a href="index.html#installers">installer table</a> lists license-verified local plumbers; no plumbing permit is needed for a point-of-use filter on an existing line in Simsbury.</div>
   </div></details>
@@ -326,10 +347,7 @@
 
 <section id="matrix">
   <div class="kicker">The matrix</div>
-  <h2>All 37 systems <small style="font-weight:400;font-size:15px;color:var(--text-muted)">(2 dealer-quote rows hidden by default)</small></h2>
-  <h3 style="margin:6px 0 4px">If you only look at five</h3>
-  <p class="tbl-note" style="margin:0 0 8px">One per situation in the shortlist below: value · certified badge · tankless · tankless-without-an-outlet · PFAS paperwork. (The G3P800 isn't here because the G3P600 is the same thing cheaper; see the tankless card.)</p>
-  <div class="table-scroll"><table class="matrix" id="m5"><thead></thead><tbody></tbody></table></div>
+  <h2>The full table — all 37 systems <small style="font-weight:400;font-size:15px;color:var(--text-muted)">(2 dealer-quote rows hidden by default)</small></h2>
   <h3 style="margin:28px 0 4px">Everything</h3>
   <p class="tbl-note" style="margin:0 0 8px">Want hot water? None of the five above has it — see the K6 row and the hot-water cards in the shortlist below. The filters apply to this full table.</p>
   <div class="filters">
@@ -340,22 +358,16 @@
     <label><input type="checkbox" id="f-noelec"> No outlet needed</label>
     <label><input type="checkbox" id="f-lowwaste"> Low waste (≤1 gal drained per gal) — septic</label>
     <label><input type="checkbox" id="f-sewer"> We're on town sewer (doubles drain-water cost)</label>
+    <label><input type="checkbox" id="f-outlet"> I already have an outlet under the sink (drops the $150–350 electrician)</label>
     <label><input type="checkbox" id="f-fridge"> Fridge-line confirmed <small id="fridge-note"></small></label>
     <label>Type <select id="f-type"><option value="">any</option><option value="tank">tank</option><option value="tankless">tankless</option></select></label>
-    <label>Max unit price <select id="f-price"><option value="">any</option><option value="300">$300</option><option value="500">$500</option><option value="800">$800</option><option value="1200">$1,200</option></select></label>
+    <label>Unit price no more than <select id="f-price"><option value="">any</option><option value="300">$300</option><option value="500">$500</option><option value="800">$800</option><option value="1200">$1,200</option></select></label>
     <label><input type="checkbox" id="f-retail" checked> Hide dealer-quote-only (Culligan, Kinetico)</label>
     <label><input type="checkbox" id="f-all"> Show all columns</label>
     <span class="count" id="count"></span>
   </div>
   <div class="table-scroll"><table class="matrix" id="m"><thead></thead><tbody></tbody></table></div>
   <p class="tbl-note">Legend: <span class="yes">✓</span> yes · <span class="no">✗</span> no · <span class="meh">◐</span> certified, but not to 58 · <span class="meh">~</span> maker claim or one-off lab test, not a certification · <span class="meh">◐ components</span> each cartridge certified, assembled system not listed · <span class="no">✗ 372</span> lead-free materials only, no filtering cert · <span class="meh">—</span> not published. (Some symbols appear only with "Show all columns".) Certifications shown are as stated on the maker's page; we spot-checked the NSF/WQA listings for iSpring, APEC, Aquasana, AO Smith, Brondell, Pentair and the Waterdrop G3 series, not every row. Click a column header to sort. "Consumables/yr" is the maker's or a reseller's estimate for prefilters/post-filters; "Membrane" is our estimate of the replacement membrane price; "Running cost/yr" adds the two together <b>with membrane life capped at 2 years for our hard water</b> (makers claim 2–4), plus the remin add-on, electricity and drain water where they apply; "(est.)" means we estimated a figure ourselves; "(assumed)" on drain water means the maker doesn't publish a ratio and we used a typical one; a "~" in front of a running cost means at least one input was estimated. A $15 TDS pen tells you when the membrane is actually done.</p>
-</section>
-
-<section id="picks">
-  <div class="kicker">Shortlist</div>
-  <h2>Which one, for which situation</h2>
-  <div class="picks" id="picks"></div>
-  <p class="tbl-note">These are our reads of the data above, not sponsorships. The index page's <a href="index.html#basement">basement-on-the-fridge-line</a> plan uses the Home Master; the under-sink plan uses the G3P800; for hot water, the G3P800 + InSinkErator combo.</p>
 </section>
 
 <section id="addons">
@@ -397,7 +409,7 @@ function priceRange(p){
 function installedRange(r){
   const [lo,hi]=priceRange(r.price_usd);
   if(lo==null) return null;
-  const e = r.needs_electricity? [150,350] : [0,0];
+  const o=document.getElementById('f-outlet'); const e = (r.needs_electricity && !(o&&o.checked))? [150,350] : [0,0];
   return [lo+200+e[0], hi+450+e[1]];
 }
 function installed(r){
@@ -418,7 +430,7 @@ function trueAnnual(r){
   const remin = r.remineralization==='optional add-on'? 40 : 0;
   return Math.round(c+m+remin+(r.electric_yr||0)+(drainCost(r)||0));
 }
-const COMPACT=['sys','type','price','inst','hot','remin','nsf','pfas','fridge','waste','warr','true'];
+const COMPACT=['sys','type','price','inst','hot','remin','nsf','pfas','fridge','waste','chg','true'];
 const REVEAL={'f-lowwaste':'waste','f-pfas':'pfas','f-fridge':'fridge','f-hot':'hot','f-remin':'remin','f-cert':'nsf'};
 const COLS=[
  {k:'sys',h:'System',f:r=>{let t=`<a href="${r.official_url}"><b>${r.brand} ${r.model}</b></a>`;
@@ -433,13 +445,14 @@ const COLS=[
  {k:'nsf',h:'NSF/WQA system certs',f:r=>{const c=r.nsf_certs||[]; if(!c.length) return r.nsf_components?'<span class="meh">◐ components</span>':N+' <small>none</small>'; const has58=c.includes('58'); if(!has58 && c.every(x=>x==='372')) return N+' <small>372 = materials only</small>'; return (has58?Y:'<span class="meh">◐</span>')+' '+c.join(', ');}, s:r=>(r.nsf_certs||[]).includes('58')?0:(r.nsf_certs||[]).length?1:2},
  {k:'pfas',h:'PFAS — basis',f:r=>(r.pfas_certified?Y:(r.pfas_basis&&r.pfas_basis!=='none'?T:N))+' <small>'+(r.pfas_basis||'none')+'</small>', s:r=>r.pfas_certified?0:(r.pfas_basis&&r.pfas_basis!=='none'?1:2)},
  {k:'gpd',h:'GPD',f:r=>r.gpd==null?U:r.gpd+(r.gpd_note?` <small>(${r.gpd_note})</small>`:''), s:r=>r.gpd??-1, cls:'num'},
- {k:'waste',h:'Gal drained / gal made',f:r=>r.drain_per_gal==null?U:`${r.drain_per_gal} <small>(~$${drainCost(r)}/yr · ${r.drain_assumed?'assumed, not published':'maker says "'+r.waste_ratio+'"'})</small>`, s:r=>r.drain_per_gal??99, cls:'num'},
+ {k:'waste',h:'Gal drained / gal made',f:r=>r.drain_per_gal==null?U:`${r.drain_per_gal} <small>(~$${drainCost(r)}/yr · ${r.drain_assumed?'assumed, not published':'maker says "'+r.waste_ratio+'" '+(r.drain_per_gal>1?'drain:pure':'pure:drain')})</small>`, s:r=>r.drain_per_gal??99, cls:'num'},
  {k:'elec',h:'Outlet',f:r=>r.needs_electricity===true?'<span class="no">outlet needed</span>':r.needs_electricity===false?'<span class="yes">no outlet</span>':U, s:r=>r.needs_electricity?1:0},
  {k:'disp',h:'TDS display',f:r=>yn(r.tds_display), s:r=>r.tds_display?0:1},
  {k:'fridge',h:'Fridge line',f:r=>r.fridge_line_ok===true?Y:r.fridge_line_ok===false?N:(r.fridge_state==='mini-tank'?'<span class="meh">~ via $50–80 mini-tank</span>':'<span class="meh">~ likely (tank) — confirm</span>'), s:r=>r.fridge_line_ok===true?0:r.fridge_line_ok===false?2:1},
  {k:'fy',h:'Filters / yr',f:r=>r.filter_cost_per_year_usd==null?U:'$'+r.filter_cost_per_year_usd+(r.filter_cost_est?' <small>(est.)</small>':''), s:r=>priceRange(r.filter_cost_per_year_usd)[0]??1e9, cls:'num'},
  {k:'mem',h:'Membrane (est.)',f:r=>(r.membrane_cost_usd==null?U:(r.membrane_cost_usd===0?'incl.':'~$'+r.membrane_cost_usd))+(r.membrane_life_months?` <small>/ ${Math.round(r.membrane_life_months/12*10)/10} yr${r.membrane_life_est?' (assumed)':''}</small>`:''), s:r=>r.membrane_cost_usd??1e9, cls:'num'},
  {k:'true',h:'Running cost / yr',f:r=>{const v=trueAnnual(r); const est=r.filter_cost_est||r.drain_assumed||r.membrane_life_est; return v==null?U:'<b>'+(est?'~':'')+'$'+v+'</b>';}, s:r=>trueAnnual(r)??1e9, cls:'num'},
+ {k:'chg',h:'Filter changes',f:r=>`${r.prefilter_life_months?'filters every '+r.prefilter_life_months+' mo':'—'}${r.membrane_cost_usd?' · membrane '+(Math.min(r.membrane_life_months||24,24)/12)+' yr':''}`, s:r=>r.prefilter_life_months||0},
  {k:'tank',h:'Tank',f:r=>r.type==='tank'?(r.tank_gallons?(typeof r.tank_gallons==='number'?r.tank_gallons+' gal':r.tank_gallons):U):'none', s:r=>typeof r.tank_gallons==='number'?r.tank_gallons:0},
  {k:'warr',h:'Warranty',f:r=>r.warranty_years?r.warranty_years+' yr':U, s:r=>r.warranty_years??0, cls:'num'},
  {k:'dim',h:'Size (in)',f:r=>txt(r.dimensions_in), s:r=>r.dimensions_in||'zz'},
@@ -458,7 +471,7 @@ function filtered(){
     if(g('f-fridge').checked && r.fridge_line_ok!==true) return false;
     if(type && r.type!==type) return false;
     if(g('f-retail').checked && /dealer/i.test(String(r.price_usd))) return false;
-    const lo=priceRange(r.price_usd)[0]; if(maxp<Infinity && (lo==null||lo>maxp)) return false;
+    const hi=priceRange(r.price_usd)[1]; if(maxp<Infinity && (hi==null||hi>maxp)) return false;
     return true;
   });
 }
@@ -477,12 +490,13 @@ function render(){
   document.getElementById('fridge-note').textContent=`(also hides ${unc} unconfirmed)`;
   document.querySelectorAll('#m th').forEach(th=>th.onclick=()=>{const k=th.dataset.k; if(k===sortKey) asc=!asc; else {sortKey=k; asc=true;} render();});
 }
-document.querySelectorAll('.filters input,.filters select').forEach(el=>el.addEventListener('change',()=>{render(); if(el.id==='f-sewer') renderPicks();}));
+document.querySelectorAll('.filters input,.filters select').forEach(el=>el.addEventListener('change',()=>{render(); if(el.id==='f-sewer'||el.id==='f-outlet') renderPicks(); renderFive();}));
 render();
-(function(){const five=['TMAFC-ERP','RCC7AK','G3P600','M800','SmartFlow'].map(m=>DATA.systems.find(r=>r.model.startsWith(m)));
+function renderFive(){const five=['TMAFC-ERP','RCC7AK','G3P600','M800','SmartFlow'].map(m=>DATA.systems.find(r=>r.model.startsWith(m)));
  const cols=COLS.filter(c=>COMPACT.includes(c.k));
  document.querySelector('#m5 thead').innerHTML='<tr>'+cols.map(c=>`<th class="${c.cls||''}">${c.h}</th>`).join('')+'</tr>';
- document.querySelector('#m5 tbody').innerHTML=five.map(r=>'<tr>'+cols.map(c=>`<td class="${c.cls||''}">${c.f(r)}</td>`).join('')+'</tr>'+`<tr class="notes-row"><td colspan="${cols.length}"><span class="yes">+</span> ${(r.notable_pros||[]).join(' · ')} &nbsp; <span class="no">−</span> ${(r.notable_cons||[]).join(' · ')}</td></tr>`).join('');})();
+ document.querySelector('#m5 tbody').innerHTML=five.map(r=>'<tr>'+cols.map(c=>`<td class="${c.cls||''}">${c.f(r)}</td>`).join('')+'</tr>'+`<tr class="notes-row"><td colspan="${cols.length}"><span class="yes">+</span> ${(r.notable_pros||[]).join(' · ')} &nbsp; <span class="no">−</span> ${(r.notable_cons||[]).join(' · ')}</td></tr>`).join('');}
+renderFive();
 document.getElementById('addons-body').innerHTML=DATA.addons.map(a=>`<tr><td><a href="${a.official_url}"><b>${a.brand} ${a.model}</b></a></td><td class="num">$${a.price_usd}</td><td class="num">${a.all_in||"—"}</td><td>${a.provides}</td><td>${a.requirements}</td><td>${a.notes}</td></tr>`).join('');
 const byModel=m=>DATA.systems.find(r=>r.model.startsWith(m));
 const fmt=n=>'$'+Math.round(n).toLocaleString();
@@ -493,8 +507,9 @@ function allin(r, extra=[0,0]){ // plumber-installed + fridge line (+kit) + stai
   return [x[0]+fr[0]+50+remin[0]+extra[0], x[1]+fr[1]+150+remin[1]+extra[1]];
 }
 const mid=a=>fmt(Math.round((a[0]+a[1])/2/10)*10);
-function line(r, extra=[0,0]){const t=trueAnnual(r); const a=allin(r,extra); return `${txt(r.price_usd)} unit · ${installed(r)} plumber-installed · <b>all-in at our house ${rng(a[0],a[1])}, expect about ${mid(a)}</b>${r.fridge_line_ok===false?' (no fridge line possible, so none added)':r.fridge_state==='mini-tank'?' (fridge line via a mini-tank included)':r.fridge_state==='likely'?' (fridge line included; maker silent, but a tank unit almost certainly works)':''} · ${t?'$'+t+'/yr to run':'—'} · pays for itself in ${payback(r,extra)}`;}
-function payback(r,extra=[0,0]){const t=(trueAnnual(r)||120)+(extra[0]?50:0); const a=allin(r,extra); const [lo,hi]=priceRange(r.price_usd); const remin=r.remineralization==='optional add-on'?[30,60]:[0,0]; const fk=r.fridge_line_ok===false?[0,0]:r.fridge_state==='mini-tank'?[50,80]:[(r.fridge_kit_usd||0),(r.fridge_kit_usd||0)]; const diy=[lo+50+remin[0]+fk[0]+(extra[0]?429:0), hi+50+remin[1]+fk[1]+(extra[1]?429:0)]; const mo=n=>Math.round(n/((630-t)/12)); const sp=(x,y)=>x===y?`${x}`:`${x}–${y}`; return `about ${sp(mo(a[0]),mo(a[1]))} months if a plumber installs it (${sp(mo(diy[0]),mo(diy[1]))} DIY — parts only, nobody hired${r.needs_electricity?', outlet assumed to exist':''})`;}
+function diyRange(r,extra=[0,0]){const [lo,hi]=priceRange(r.price_usd); const remin=r.remineralization==='optional add-on'?[30,60]:[0,0]; const fk=r.fridge_line_ok===false?[0,0]:r.fridge_state==='mini-tank'?[50,80]:[(r.fridge_kit_usd||0),(r.fridge_kit_usd||0)]; return [lo+50+remin[0]+fk[0]+(extra[0]?429:0), hi+50+remin[1]+fk[1]+(extra[1]?429:0)];}
+function line(r, extra=[0,0]){const t=trueAnnual(r); const a=allin(r,extra); const dy=diyRange(r,extra); const m=(a[0]+a[1])/2; return `${txt(r.price_usd)} unit · ${installed(r)} plumber-installed · <b>all-in at our house ${rng(a[0],a[1])}, expect about ${mid(a)}</b> (~${fmt(Math.round((m-100)/10)*10)} with a spare sink hole, ~${fmt(Math.round((m+125)/10)*10)} with granite) · <b>DIY ${rng(dy[0],dy[1])}</b>${r.fridge_line_ok===false?' (no fridge line possible, so none added)':r.fridge_state==='mini-tank'?' (fridge line via a mini-tank included)':r.fridge_state==='likely'?' (fridge line included; maker silent, but a tank unit almost certainly works)':''} · ${t?'$'+t+'/yr to run':'—'} · pays for itself in ${payback(r,extra)}`;}
+function payback(r,extra=[0,0]){const t=(trueAnnual(r)||120)+(extra[0]?50:0); const a=allin(r,extra); const diy=diyRange(r,extra); const mo=n=>Math.round(n/((630-t)/12)); const sp=(x,y)=>x===y?`${x}`:`${x}–${y}`; return `about ${sp(mo(a[0]),mo(a[1]))} months if a plumber installs it, ${sp(mo(diy[0]),mo(diy[1]))} DIY (costed at 3 gal/day; a month or two faster at our current 1 gal/day)`;}
 const HM=byModel('TMAFC-ERP'), ISP=byModel('RCC7AK'), APC=byModel('ROES-PH75'), G3=byModel('G3P800'), G36=byModel('G3P600'), M8=byModel('M800'), K6=byModel('K6'), AQ=byModel('SmartFlow'), AO=byModel('RO-MB-4000');
 function renderPicks(){
 const PICKS=[
@@ -504,12 +519,12 @@ const PICKS=[
  ['Tankless but no outlet under the sink','Frizzlife M800',line(M8),`The one tankless unit that runs on water pressure alone (needs ≥50 psi — ask the plumber to check). NSF 58 certified, built-in remin, drains only 0.25 gal per gal. Frizzlife doesn't document a fridge line, so the all-in includes a $50–80 mini-tank to make one work — call Frizzlife to confirm. New, so few long-term reviews.`],
  ['Hot water, certified filtration','Waterdrop G3P600 + InSinkErator HC250',`${txt(G36.price_usd)} + $429 unit · <b>all-in ${rng(...allin(G36,[529,629]))}, expect about ${mid(allin(G36,[529,629]))}</b> (second faucet hole included) · $${trueAnnual(G36)+50}/yr to run · pays for itself in ${payback(G36,[529,629])}`,`Certified RO feeding a 200°F hot/room-temp tap. The heater only ever sees RO water so it never scales. Two faucets at the sink, two outlets (or a double). The HC250 adds $529–629 here rather than the $650–950 in the add-ons table because the outlet and plumber visit are already in the RO's install. This is the hot-water route we'd take.`],
  ['Hot water from one faucet, simplest install','Waterdrop K6',line(K6),`Instant 104–203°F hot plus filtered from one smart faucet. Trade-offs: only NSF 372 (materials) — no performance certification — and it can't feed the fridge. Fine if one faucet and a quick install matter more than paperwork.`],
- ['Strongest PFAS paperwork','Aquasana SmartFlow (or AO Smith RO-MB-4000)',line(AQ),`Both certified to P473 (PFOA/PFOS) and 401. Trade-off: yearly membranes, so ${(()=>{const a=[trueAnnual(AQ),trueAnnual(AO)].sort((x,y)=>x-y); return a[0]===a[1]?'$'+a[0]+'/yr for either':'$'+a[0]+'–'+a[1]+'/yr';})()} — ${(()=>{const mx=Math.max(trueAnnual(AQ),trueAnnual(AO)); const more=DATA.systems.filter(r=>(trueAnnual(r)||0)>mx); const hid=more.filter(r=>/dealer/i.test(String(r.price_usd))).length; return more.length+' systems cost more to run ('+more.map(r=>r.brand+' '+r.model.replace(/ \(.*\)/,'')).join(', ')+(hid?`; ${hid} of them dealer rows hidden by default`:'')+')';})()}. Slow output (26 and 12 gal/day tested) — fine for drinking, not for filling stockpots. Neither maker documents a fridge line, but as tank units they almost certainly work; the all-in includes it.`],
+ ['Strongest PFAS paperwork','Aquasana SmartFlow (or AO Smith RO-MB-4000)',line(AQ),`Both certified to P473 (PFOA/PFOS) and 401. Trade-off: yearly membranes, so ${(()=>{const a=[trueAnnual(AQ),trueAnnual(AO)].sort((x,y)=>x-y); return a[0]===a[1]?'$'+a[0]+'/yr for either':'$'+a[0]+'–'+a[1]+'/yr';})()} — ${(()=>{const mx=Math.max(trueAnnual(AQ),trueAnnual(AO)); const more=DATA.systems.filter(r=>(trueAnnual(r)||0)>mx); const hid=more.filter(r=>/dealer/i.test(String(r.price_usd))).length; return more.length+' systems cost more to run ('+more.map(r=>r.brand+' '+r.model.replace(/ \(.*\)/,'')).join(', ')+(hid?`; ${hid} of them dealer rows hidden by default`:'')+')';})()}. Slow output (26 and 12 gal/day tested) — fine for drinking, not for filling stockpots. Neither maker documents a fridge line, but as tank units they almost certainly work; the all-in includes it. The Pentair GRO-575M is certified for <i>total</i> PFAS (broader than PFOA/PFOS) but costs $680–850 with no remineralization — that's why it isn't the pick.`],
  ['Cheapest to run, if taste doesn\'t matter','APEC ROES-50 (or Express Water RO5DX)',line(byModel('ROES-50')),`The two cheapest-to-run rows on the table ($${trueAnnual(byModel('ROES-50'))} and $${trueAnnual(byModel('RO5DX'))}/yr). Neither has remineralization, so expect flat-tasting water — fine in coffee, noticeable in a glass. Not our pick for that reason alone.`],
  ['Hands-off, somebody else owns it','Culligan Aquasential (Windsor dealer)',`quote: ~$1,050–1,700 installed, or rent ~$30–71/mo (third-party reports; the Windsor dealer publishes nothing — get it in writing)`,`Installed and serviced by the dealer, 10-year tank/parts warranty, certified incl. 401. You pay for it in filter pricing (we estimate $150–300/yr) and lock-in; at $30/mo renting beats jugs by ~$270/yr with nothing upfront; at $71/mo it's worse than jugs; either way it never beats owning. Hidden from the table by default (no published price) — untick the box to see it.`],
 ];
 document.getElementById('verdict-list').innerHTML=[
- `<li><b>Buy this:</b> Home Master TMAFC-ERP — ${line(HM)}. No outlet, no electrician, feeds the fridge. Put it under the sink, or in the basement spliced into the existing fridge line if that's easier for the plumber — same unit, same cost. Where the money goes: ~$380 unit + ~$325 plumber + ~$140 fridge line + ~$100 faucet hole ≈ $940 (about $1,065 with a granite counter). No NSF badge on the box, and that's fine on city water — why, in the shortlist card below.</li>`,
+ `<li><b>Buy this:</b> Home Master TMAFC-ERP — ${line(HM)}. No outlet, no electrician, feeds the fridge. Put it under the sink, or in the basement spliced into the existing fridge line if that's easier for the plumber — same unit, same cost. Where the money goes: ~$380 unit + ~$325 plumber + ~$138 fridge line + ~$100 faucet hole ≈ $940. First-year total with the ~$378 test and a year of filters: about $1,450. No NSF badge on the box, and that's fine on city water — why, in the shortlist card below.</li>`,
  `<li><b>Before you order, check three things:</b> is there a spare sprayer/soap hole in the sink (saves ~$100)? a wall outlet under the sink (only matters for tankless/hot units)? a sewer line on the water bill (tick the sewer box on the table)?</li>`,
  `<li><b>Test first or buy first?</b> Buy. The ~$378 baseline test (Tap Score panel + PFAS kit) is to learn what's at <i>our</i> tap and, run on the RO output afterwards, to prove the unit is doing its job; it applies to every path including staying on jugs, so it isn't in any payback figure. If it shows PFAS, the Home Master still removes it; the Aquasana/AO Smith card below is for people who want a certificate saying so.</li>`,
  `<li><b>If the badge on the box matters to you anyway:</b> iSpring RCC7AK — ${line(ISP)}.</li>`,
