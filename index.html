@@ -642,7 +642,7 @@
         </tbody>
       </table>
     </div>
-    <p class="tbl-note"><b>Bottom line:</b> realistic all-in numbers for our kitchen — <b>Home Master DIY ~$480</b> (unit + fridge kit + prefilter); <b>Home Master pro-installed ~$700–850</b>; <b>Waterdrop G3P800 pro-installed ~$1,100–1,400</b> if an outlet must be added, ~$950–1,200 if one already exists; <b>Culligan dealer ~$1,050–1,700</b> turnkey (or $10–30/mo rental, zero upfront). Get the quote from <a href="#installers">a Valley plumber</a> for installing an owner-supplied unit — that's the cheapest pro path — and ask them to price the fridge line and faucet hole as separate items so they can be declined.</p>
+    <p class="tbl-note"><b>Bottom line:</b> realistic all-in numbers for our kitchen — <b>Home Master DIY ~$480</b> (unit + fridge kit + prefilter); <b>Home Master pro-installed ~$700–850</b> (about $940 all-in once the fridge line and a faucet hole are added — see the <a href="ro-matrix.html">matrix</a>); <b>Waterdrop G3P800 pro-installed ~$1,100–1,400</b> if an outlet must be added, ~$950–1,200 if one already exists; <b>Culligan dealer ~$1,050–1,700</b> turnkey (or ~$30–71/mo rental, zero upfront — about a tie with jugs). Get the quote from <a href="#installers">a Valley plumber</a> for installing an owner-supplied unit — that's the cheapest pro path — and ask them to price the fridge line and faucet hole as separate items so they can be declined.</p>
   </section>
 
 
@@ -748,7 +748,7 @@
             <td>Windsor</td>
             <td>(860) 787-0621</td>
             <td>Culligan dealer — softeners, Aqua-Cleer RO</td>
-            <td><b>License check ⚠</b> Location page lists Simsbury-area towns; free in-home water test; rental options ($10–30/mo) mean zero upfront. No state record under "Culligan" — the franchise operates under a different legal entity, so ask for it plus the license number.</td>
+            <td><b>License check ⚠</b> Location page lists Simsbury-area towns; free in-home water test; rental reported at ~$30–71/mo by third parties (nothing published — get it in writing) means zero upfront but roughly ties jug delivery. No state record under "Culligan" — the franchise operates under a different legal entity, so ask for it plus the license number.</td>
           </tr>
           <tr>
             <td><a href="https://www.grecoandhaines.com/water-filtration-softeners/"><b>Greco &amp; Haines</b></a></td>
@@ -785,7 +785,7 @@
         </div>
       </details>
     </div>
-    <p class="tbl-note">Assumptions: jugs $630/yr (midpoint of $480–780). DIY RO: $450 upfront (Home Master TMAFC-ERP + fridge kit), $99/yr filters — breaks even in ~10 months. Pro route: $1,100 upfront (Waterdrop G3P800 + plumber install), $155/yr filters — breaks even around 2¼ years. Five-year totals: jugs ~$3,150 · DIY RO ~$945 · pro RO ~$1,875. RO reject water at city rates adds only a few dollars a year. The baseline test (~$378) applies equally to every path, including staying on jugs — knowing what's in the tap is worth it either way.</p>
+    <p class="tbl-note">Assumptions: jugs $630/yr (midpoint of $480–780). DIY RO: $480 upfront (Home Master TMAFC-ERP + fridge kit + prefilter), $135/yr to run (filters + membrane on our hard water + drain water) — breaks even in ~12 months. Pro route: $1,100 upfront (Waterdrop G3P800 + plumber install), $260/yr to run (filters, a pricier membrane, remin cartridge, electricity, drain water) — breaks even around 3 years. Five-year totals: jugs ~$3,150 · DIY RO ~$1,155 · pro RO ~$2,400. Running costs use the same formula as the <a href="ro-matrix.html">full comparison matrix</a>. The baseline test (~$378) applies equally to every path, including staying on jugs — knowing what's in the tap is worth it either way.</p>
   </section>
 
   <section id="actions">
@@ -849,8 +849,8 @@
   var MONTHS = 60;
   var series = [
     { name: "Jug delivery",      cssVar: "--series-1", f: function (m) { return 52.5 * m; } },
-    { name: "DIY RO",            cssVar: "--series-2", f: function (m) { return m === 0 ? 450 : 450 + (99 / 12) * m; } },
-    { name: "Pro tankless RO",   cssVar: "--series-3", f: function (m) { return m === 0 ? 1100 : 1100 + (155 / 12) * m; } }
+    { name: "DIY RO",            cssVar: "--series-2", f: function (m) { return m === 0 ? 480 : 480 + (135 / 12) * m; } },
+    { name: "Pro tankless RO",   cssVar: "--series-3", f: function (m) { return m === 0 ? 1100 : 1100 + (260 / 12) * m; } }
   ];
 
   var chartEl = document.getElementById("chart");
@@ -907,7 +907,7 @@
     svg.setAttribute("width", W);
     svg.setAttribute("height", H);
     svg.setAttribute("role", "img");
-    svg.setAttribute("aria-label", "Line chart: cumulative five-year cost. Jug delivery reaches about $3,150; DIY RO about $945; pro tankless RO about $1,875.");
+    svg.setAttribute("aria-label", "Line chart: cumulative five-year cost. Jug delivery reaches about $3,150; DIY RO about $1,155; pro tankless RO about $2,400.");
 
     function el(name, attrs) {
       var e = document.createElementNS(NS, name);
