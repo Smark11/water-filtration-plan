@@ -195,6 +195,9 @@
   details.tableview table { min-width: 480px; }
 
   /* ---------- checklist ---------- */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-top: 8px; }
+  .grid-2 h3 { margin-top: 0; }
+  .grid-2 h3 + p, .grid-2 h3 + ul { margin-top: 6px; }
   .checklist { list-style: none; display: grid; gap: 10px; margin-top: 8px; }
   .checklist li {
     background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
@@ -519,7 +522,7 @@
         </div>
       </div>
     </div>
-    <div class="aside"><b>The softener question.</b> A whole-house softener ($1,200–3,800 installed, plus $60–300/yr salt) is a comfort-and-appliances decision, not a drinking-water requirement: it would stop scale on fixtures and the water heater, and stretch the RO membrane's life — but the RO handles hardness in the drinking water by itself. Our take: do the RO now, revisit the softener if the baseline test comes back at the hard end of the 4–16 gpg range.</div>
+    <div class="aside" id="softener"><b>The softener question.</b> A whole-house softener ($1,200–3,800 installed, plus $60–300/yr salt) is a comfort-and-appliances decision, not a drinking-water requirement: it would stop scale on fixtures and the water heater, and stretch the RO membrane's life — but the RO handles hardness in the drinking water by itself. Our take: do the RO now, revisit the softener if the baseline test comes back at the hard end of the 4–16 gpg range.</div>
   </section>
 
   <section id="systems">
@@ -642,6 +645,46 @@
     <p class="tbl-note"><b>Bottom line:</b> realistic all-in numbers for our kitchen — <b>Home Master DIY ~$480</b> (unit + fridge kit + prefilter); <b>Home Master pro-installed ~$700–850</b>; <b>Waterdrop G3P800 pro-installed ~$1,100–1,400</b> if an outlet must be added, ~$950–1,200 if one already exists; <b>Culligan dealer ~$1,050–1,700</b> turnkey (or $10–30/mo rental, zero upfront). Get the quote from <a href="#installers">a Valley plumber</a> for installing an owner-supplied unit — that's the cheapest pro path — and ask them to price the fridge line and faucet hole as separate items so they can be declined.</p>
   </section>
 
+
+  <section id="basement">
+    <div class="kicker">Alternative layout</div>
+    <h2>Option: basement RO feeding the existing fridge line</h2>
+    <p class="lede">We already have a ¼" water line running from the basement to the refrigerator. Splicing a tank-style RO into that line in the basement is simpler and cheaper than an under-sink install — it just comes with two trade-offs, hot water and calcium, that need a plan.</p>
+    <div class="grid-2">
+      <div>
+        <h3>Why it's easier</h3>
+        <ul>
+          <li><b>No cabinet surgery.</b> The RO taps the cold line where the fridge tube starts; its output goes into the tube that's already there. No faucet hole, no drain saddle on the kitchen trap.</li>
+          <li><b>Drain is right there</b> — utility sink, floor drain, or laundry standpipe (with an air gap).</li>
+          <li><b>Room for a tank system</b> and standing-up filter changes.</li>
+          <li><b>Lower labor:</b> a plumber's basement tie-in runs about <b>$150–300</b>, vs. $200–450 under the sink.</li>
+        </ul>
+        <h3>What to buy</h3>
+        <p>A <b>tank RO with a permeate pump</b> — the <a href="https://www.homedepot.com/p/Home-Master-Artesian-Full-Contact-with-Permeate-Pump-Under-Sink-Reverse-Osmosis-System-TMAFC-ERP/205618340">Home Master TMAFC-ERP</a> is the obvious pick (1:1 waste, remineralization built in). The tank holds ~35–40 psi, which pushes fine through a 20–30 ft run and one floor of rise (~0.4 psi lost per vertical foot); fridges need 20–40 psi. <b>Not a tankless unit</b> — the Waterdrop G3P800/K6 are built for a short run to their own faucet and will starve a fridge solenoid.</p>
+        <p><b>Pull the fridge's own filter</b> (or fit its bypass plug). RO water has nothing left for a carbon cartridge to remove, and the cartridge is a flow restriction — this also saves the $50–100/yr in fridge filters.</p>
+        <p><b>Optional kitchen tap:</b> while the plumber is there, run a second 3/8" line up the same path and tee it to an RO faucet at the sink (+$75–150, plus a faucet hole if the sink has no spare).</p>
+      </div>
+      <div>
+        <h3>Trade-off 1: no hot water</h3>
+        <p>A fridge dispenser is cold-only, so this layout loses the instant-hot option that the under-sink <a href="https://www.waterdropfilter.com/pages/instant-hot-water-dispenser-ro-system-wd-k6">Waterdrop K6</a> would give. Two ways back:</p>
+        <ul>
+          <li><b>Add an instant-hot tap at the sink fed by the RO line</b> — an <a href="https://www.insinkerator.com/en-us/insinkerator-products/water-dispensers">InSinkErator HC250 hot/cold dispenser</a> (~$300–450 + $100–200 install + outlet under the sink). Because the heater only ever sees RO water, it never scales — the biggest failure mode for these heaters on hard tap water.</li>
+          <li><b>Or just a kettle</b> filled from the fridge dispenser — zero cost, and on RO water the kettle stays scale-free too.</li>
+        </ul>
+        <h3>Trade-off 2: calcium (hardness)</h3>
+        <ul>
+          <li><b>It doesn't clog filters</b> — calcium is dissolved, so sediment and carbon stages aren't affected — but it <b>scales the RO membrane</b>, cutting its life from 2–5 years to roughly <b>1–2 years</b> (~$40–60 per membrane on the Home Master). Budgeted in the cost table.</li>
+          <li><b>Install a <a href="https://www.appliedmembranes.com/scale-filters-phosphate-filter-cartridges.html">polyphosphate scale-inhibitor prefilter</a> ($15–40)</b> ahead of the RO; in the basement there's room for a standard 10" housing. Best dollar-for-dollar protection.</li>
+          <li><b>Don't over-tighten the waste ratio.</b> Hard water needs the reject flow to carry minerals away; keep the flow restrictor at spec.</li>
+          <li><b>The calcium that matters for taste gets added back on purpose</b> — the Home Master's remineralization stage dissolves a controlled amount of Ca/Mg into the finished water, so it tastes like spring water rather than flat RO water. The difference: ~20–40 ppm of added minerals vs. the 170–270 ppm that came in.</li>
+          <li><b>TDS meter ($15)</b> on the fridge dispenser tells you when the membrane is going (product water creeping above ~40–50 ppm) — no guessing.</li>
+          <li>A whole-house softener (<a href="#softener">see above</a>) would stretch membrane life to 3–5 years and protect the heater if we add one, but it's not required for this plan.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tbl-note"><b>All-in for this layout:</b> Home Master TMAFC-ERP ~$430 + prefilter housing/cartridge ~$40 + fittings ~$20 = <b>~$490 DIY</b>, or <b>~$650–800 with a plumber</b>. Add the kitchen RO faucet for ~$100–250 more, or the InSinkErator hot/cold tap for ~$500–700 more all-in. Compared with the under-sink table: cheapest pro route on the page, with the best uranium/hardness/lead removal and the fewest cabinet compromises.</p>
+  </section>
+
   <section id="installers">
     <div class="kicker">Local help</div>
     <h2>Installers who serve the Farmington Valley</h2>
@@ -752,6 +795,7 @@
       <li><span class="box"></span><span><b>Download Aquarion's free 2025 Simsbury water quality report</b> (<a href="https://www.aquarionwater.com/water-quality/water-quality-reports">aquarionwater.com</a>) — the system-level baseline costs nothing.</span></li>
       <li><span class="box"></span><span><b>Order the <a href="https://mytapscore.com/products/advanced-city-water-test">Tap Score Advanced City Water test</a> ($299) + <a href="https://cyclopure.com/product/wtk/">Cyclopure PFAS kit</a> ($79).</b> Collect the lead/copper sample first-draw after 6+ hours of no water use.</span></li>
       <li><span class="box"></span><span><b>Read the results against this page:</b> hardness number → softener decision; lead present → RO or NSF 53 stage confirmed; PFAS detected → prefer the PFAS-certified models (Aquasana SmartFlow, AO Smith).</span></li>
+      <li><span class="box"></span><span><b>Decide the layout</b> — basement RO on the existing fridge line (<a href="#basement">cheapest, tank unit</a>) vs. under-sink with its own faucet (needed for the instant-hot K6 option).</span></li>
       <li><span class="box"></span><span><b>Pick the RO system</b> — tankless (<a href="https://www.waterdropfilter.com/pages/reverse-osmosis-system-g3p800">Waterdrop G3P800</a>) or tank (<a href="https://www.theperfectwater.com/Home-Master-Artesian-Full-Contact-Reverse-Osmosis-Water-Filtration-System.html">Home Master TMAFC-ERP</a>), with remineralization and a <a href="https://www.appliedmembranes.com/scale-filters-phosphate-filter-cartridges.html">polyphosphate prefilter</a> — plus the fridge/ice-maker tee kit.</span></li>
       <li><span class="box"></span><span><b>DIY the install, or get quotes from 2–3 installers above</b> — licenses pre-checked Aug 2026 (see table notes); re-verify on <a href="https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx">CT DCP eLicense</a> before signing, and confirm they serve our exact address.</span></li>
       <li><span class="box"></span><span><b>Verify the output</b> — TDS meter weekly at first, and an optional lab retest of the RO water for lead/uranium/PFAS.</span></li>
